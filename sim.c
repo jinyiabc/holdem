@@ -75,10 +75,13 @@ printf("ante=%g blind=%g (%s)\n",an,bl,liv?"LIVE":"NON-LIVE");
 for(i=0;i<13;i++)for(j=0;j<13;j++)
  sprintf(hs[i*13+j],"%c%c%c",i>=j?cd[i+2]:cd[j+2],
   i>=j?cd[j+2]:cd[i+2],"os"[i>j]);
-fp=popen("gunzip -c fa2n.gz","r");
+// fp=popen("gunzip -c fa2n.gz","r");
+fp=fopen("fa2n","r");
+
 if(fp==0){printf("Couldn't open EV file\n");exit(0);}
 for(i=0;i<169;i++)for(j=0;j<169;j++)fscanf(fp,"%*s %*s %lf",&wa[i][j]);
-pclose(fp);
+// pclose(fp);
+fclose(fp);
 for(i=0;i<169;i++)for(j=0;j<169;j++){
  x=fabs(wa[i][j]+wa[j][i]);
  if(x>1e-5)printf("Error of %g at %d,%d\n",x,i,j);
@@ -331,7 +334,7 @@ return 0;
 void prp(int px,int cx,int dx,int pr,double (*p)[cx]){
 int i,j,pure[dx];
 double ep;
- 
+
 ep=pow(10,-pr);
 for(i=0;i<dx;i++)for(j=0,pure[i]=0;j<cx;j++)if(fabs(p[i][j]-1)<ep)pure[i]=1;
 printf("Strategy for player %d (%s blind)\nPure bit:\n",px,px?"small":"big");
@@ -420,7 +423,7 @@ void spc(int n){for(;n>0;n--)printf(" ");}
 // it finds the initial pure strategy.)
 //
 // The number of the situations (cards) for P0 in the live case is
-// cC0, rC0, cC1, rC1, ... 
+// cC0, rC0, cC1, rC1, ...
 // cCn = (n)th cards, P1 has called to begin with  (P1 has CRmF or CRmC)
 // rCn = (n)th cards, P1 has raised or folded to begin with (P1 has RmF or RmC)
 
@@ -474,7 +477,7 @@ return ev;
 // double ev(int i0,int s0,int i1,int s1) should return:
 // [Value (to Px) given that Px is in situation i0 and does strategy s0,
 //   and Py is in situation i1 and does s1]*Pr(i0,i1)*scale
-// 
+//
 // This is set up so that if p(i0,s0) is the probability of Px using strategy s0 given he
 // is in situation i0, and q(i1,s1) is the probability of Py using strategy s1 given he
 // is in situation i1, then the expected value (to Px) of the whole game is
