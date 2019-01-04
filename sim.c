@@ -84,6 +84,7 @@ for(i=0;i<169;i++)for(j=0;j<169;j++){
  if(x>1e-5)printf("Error of %g at %d,%d\n",x,i,j);
 }
 {int i0,i1,j0,j1,s0,s1,s2,s3,n,t;
+// float total=0;
 t=0;
 for(i=0;i<169;i++)for(j=0;j<169;j++){
  i0=i/13;i1=i%13;j0=j/13;j1=j%13;
@@ -94,13 +95,16 @@ for(i=0;i<169;i++)for(j=0;j<169;j++){
  if(i0==i1)n/=2;
  if(j0==j1)n/=2;
  t+=n;
+ // total+=wa[i][j];   //total = -0.004034
  prob[i][j]=n;
 }
 if(t!=52*51*50*49/(2*2)){printf("Error: total count=%d\n",t);exit(0);}
 for(i=0;i<169;i++)for(j=0;j<169;j++)prob[i][j]*=169.0*169.0/t;
+// printf("total = %f\n",total );
 }
 if(list)for(i=0;i<169;i++)for(j=0;j<169;j++){
- x=wa[i][j]/prob[i][j];printf("%s %s    P(win)=%8.6f    EV=%9.6f\n",hs[i],hs[j],(x+1)/2,x);}
+ x=wa[i][j]/prob[i][j];
+ printf("%s %s    P(win)=%8.6f    EV=%9.6f\n",hs[i],hs[j],(x+1)/2,x);}
 #endif
 
 c0=2*nr+1;c1=2*nr+2+(2*nr-1)*liv;
@@ -140,7 +144,7 @@ for(i=0;i<d0;i++)for(k=0;k<d1;k++){
 //
 // Variable numbers of P(i,j) are 1...d0*c0
 // Variable numbers of Y(k,l) are d0*c0+1...d0*c0+d1*c1
-// Variable numbers of M(k)   are d0*c0+d1*c1+1...d0*c1+d1*(c1+1)
+// Variable numbers of M(k)   are d0*c0+d1*c1+1...d0*c0+d1*(c1+1)
 
 scale=d0*d1/(1+liv);
 printf("Finding initial pure strategy\n");
@@ -284,7 +288,7 @@ it++;
 //procp(m,n,c0,c1,d0,d1,a,mi,ni);
 }
 
-printf("\nDONE.  Time=%ds\n",time(NULL)-t0);
+printf("\nDONE.  Time=%lu\n",time(NULL)-t0);
 for(i=0;i<=m+n;i++)xx[i]=0;
 for(i=1;i<=m;i++)xx[mi[i]]=a[i][0];
 for(i=0;i<d0;i++)for(j=0;j<c0;j++)p[i][j]=xx[fnep(i,j)];
@@ -331,7 +335,7 @@ return 0;
 void prp(int px,int cx,int dx,int pr,double (*p)[cx]){
 int i,j,pure[dx];
 double ep;
- 
+
 ep=pow(10,-pr);
 for(i=0;i<dx;i++)for(j=0,pure[i]=0;j<cx;j++)if(fabs(p[i][j]-1)<ep)pure[i]=1;
 printf("Strategy for player %d (%s blind)\nPure bit:\n",px,px?"small":"big");
@@ -420,7 +424,7 @@ void spc(int n){for(;n>0;n--)printf(" ");}
 // it finds the initial pure strategy.)
 //
 // The number of the situations (cards) for P0 in the live case is
-// cC0, rC0, cC1, rC1, ... 
+// cC0, rC0, cC1, rC1, ...
 // cCn = (n)th cards, P1 has called to begin with  (P1 has CRmF or CRmC)
 // rCn = (n)th cards, P1 has raised or folded to begin with (P1 has RmF or RmC)
 
@@ -467,14 +471,14 @@ return ev;
 //
 // descs(char *buf,int pl,int st) should return into buf a short string describing strategy
 // number st of player pl (using the pl passed to it).
-// descc(char *bug,int pl,int i) should return into buf a short string describing situation number i
+// descc(char *buf,int pl,int i) should return into buf a short string describing situation number i
 //
 // Let Px denote Player pl, Py denote Player 1-pl (using the global pl).
 //
 // double ev(int i0,int s0,int i1,int s1) should return:
 // [Value (to Px) given that Px is in situation i0 and does strategy s0,
 //   and Py is in situation i1 and does s1]*Pr(i0,i1)*scale
-// 
+//
 // This is set up so that if p(i0,s0) is the probability of Px using strategy s0 given he
 // is in situation i0, and q(i1,s1) is the probability of Py using strategy s1 given he
 // is in situation i1, then the expected value (to Px) of the whole game is
