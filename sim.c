@@ -75,10 +75,13 @@ printf("ante=%g blind=%g (%s)\n",an,bl,liv?"LIVE":"NON-LIVE");
 for(i=0;i<13;i++)for(j=0;j<13;j++)
  sprintf(hs[i*13+j],"%c%c%c",i>=j?cd[i+2]:cd[j+2],
   i>=j?cd[j+2]:cd[i+2],"os"[i>j]);
-fp=popen("gunzip -c fa2n.gz","r");
+// fp=popen("gunzip -c fa2n.gz","r");
+fp=fopen("fa2n","r");
+
 if(fp==0){printf("Couldn't open EV file\n");exit(0);}
 for(i=0;i<169;i++)for(j=0;j<169;j++)fscanf(fp,"%*s %*s %lf",&wa[i][j]);
-pclose(fp);
+// pclose(fp);
+fclose(fp);
 for(i=0;i<169;i++)for(j=0;j<169;j++){
  x=fabs(wa[i][j]+wa[j][i]);
  if(x>1e-5)printf("Error of %g at %d,%d\n",x,i,j);
