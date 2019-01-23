@@ -81,7 +81,7 @@ for(i=0;i<169;i++)for(j=0;j<169;j++){
  if(x>1e-5)printf("Error of %g at %d,%d\n",x,i,j);
 }
 {int i0,i1,j0,j1,s0,s1,s2,s3,n,t;
-// float total=0;
+float total=0;
 t=0;
 for(i=0;i<169;i++)for(j=0;j<169;j++){
  i0=i/13;i1=i%13;j0=j/13;j1=j%13;
@@ -95,14 +95,20 @@ for(i=0;i<169;i++)for(j=0;j<169;j++){
  // total+=wa[i][j];   //total = -0.004034
  prob[i][j]=n;
 }
+
+
 if(t!=52*51*50*49/(2*2)){printf("Error: total count=%d\n",t);exit(0);}
 for(i=0;i<169;i++)for(j=0;j<169;j++)prob[i][j]*=169.0*169.0/t;
 // printf("total = %f\n",total );
-}
 if(list)for(i=0;i<169;i++)for(j=0;j<169;j++){
  x=wa[i][j]/prob[i][j];
- printf("%s %s    P(win)=%8.6f    EV=%9.6f\n",hs[i],hs[j],(x+1)/2,x);}
+ total+=wa[i][j];
+ printf("%s %s    P(win)=%8.6f    EV=%9.6f prob=%9.6f\n",hs[i],hs[j],(x+1)/2,x,prob[i][j]);}
 #endif
+
+// descc(temp0,pl,0);rpad(temp0,10);printf("%s",temp0);printf("\n");
+// descc(temp1,pl,0);lpad(temp1,10);printf("%s",temp1);printf("\n");
+}
 
 c0=2*nr+1;c1=2*nr+2+(2*nr-1)*liv;
 if(pl==1){i=c0;c0=c1;c1=i;i=d0;d0=d1;d1=i;}
@@ -118,43 +124,173 @@ double (*a)[n+1],p[d0][c0],q[d1][c1],pv[d1][c1],xx[m+n+1];
 a=(double (*)[n+1])malloc((m+1)*(n+1)*sizeof(double));
 if(a==0){printf("Couldn't malloc a\n");exit(0);}
 
+/*
+for(i=0;i<d0;i++)for(k=0;k<d1;k++){
+ descc(temp0,pl,i);descc(temp1,1-pl,k);printf("%s vs %s\n",temp0,temp1);
+ printf("    ");
+ for(l=0;l<c1;l++){descs(temp0,1-pl,l);lpad(temp0,pr+8);printf("%s",temp0);}printf("\n");
+ for(j=0;j<c0;j++){descs(temp0,pl,j);lpad(temp0,6);printf("%s",temp0);
+  for(l=0;l<c1;l++)printf("%*.*g  ",pr+6,pr,ev(i,j,k,l));
+  printf("\n");}
+ printf("\n");}
+*/
 
-// for(i=0;i<d0;i++)for(k=0;k<d1;k++){
-//  descc(temp0,pl,i);descc(temp1,1-pl,k);printf("%s vs %s %d\n",temp0,temp1,i);
-//  printf("    ");
-//  for(l=0;l<c1;l++){descs(temp0,1-pl,l);lpad(temp0,pr+8);printf("%s",temp0);}printf("\n");
-//  for(j=0;j<c0;j++){descs(temp0,pl,j);lpad(temp0,6);printf("%s",temp0);
-//   for(l=0;l<c1;l++)printf("%*.*g  ",pr+6,pr,ev(i,j,k,l));
-//   printf("\n");}
-//  printf("\n");}
+// Vars:        p(i,j)   (i<d0,j<c0)
+//              y(k,l)   (k<d1,l<c1)
+//              m(k)     (k<d1)
+// Equations:   m(k)+y(k,l)=sum_{i,j}p(i,j)ev(i,j,k,l)
+//              sum_j p(i,j)=1
+// Constraints: y(k,l)>=0, p(i,j)>=0, m(k)=anything
+// Objective: sum_k m(k)
+// Initialise so that p(i,ji[i]), y(k,not lk[k]), m(i) are basic
+//                    p(i,not ji[i]), y(k,lk[k]) are non-basic
 //
+// Variable numbers of P(i,j) are 1...d0*c0
+// Variable numbers of Y(k,l) are d0*c0+1...d0*c0+d1*c1
+// Variable numbers of M(k)   are d0*c0+d1*c1+1...d0*c0+d1*(c1+1)
+
+scale=d0*d1/(1+liv);
+printf("Finding initial pure strategy\n");
+for(i=0;i<d0;i++)ji[i]=0;//(c0>1&&pl==0&&(i&1)==0?1:0);
+for(k=0;k<d1;k++)for(l=0;l<c1;l++){
+ for(i=0,s=0;i<d0;i++)s+=ev(i,ji[i],k,l);pv[k][l]=s;
 }
 
-descs(temp0,1-pl,5);
-printf("s1=5 %s c=%d\n",temp0,(5&2)>>1);
-descs(temp0,1-pl,6);
-printf("s1=6 %s c=%d\n",temp0,(6&2)>>1);
-descs(temp0,1-pl,7);
-printf("s1=7 %s c=%d\n",temp0,(7&2)>>1);
-printf("s1=8 c=%d\n",(8&2)>>1);
-printf("s1=9 c=%d\n",(9&2)>>1);
-printf("s1=10 c=%d\n",(10&2)>>1);
-printf("s1=11 c=%d\n",(11&2)>>1);
+tph=(liv==1&&pl==0);
+/*printf("tph=%d\n",tph );
 
-descc(temp1,pl,1);
-printf("i0=1 %s %d\n", temp1, (1&1));
-descc(temp1,pl,2);
-printf("i0=2 %s %d\n", temp1, (2&1));
-descc(temp1,pl,3);
-printf("i0=3 %s %d\n", temp1, (3&1));
-descc(temp1,pl,4);
-printf("i0=4 %s %d\n", temp1, (4&1));
-descc(temp1,pl,5);
-printf("i0=5 %s %d\n", temp1, (5&1));
+for(cn=0;cn<1+tph;cn++){
+for (int l = 0; l < 10; l++) {
+  descs(temp0,1-pl,l);lpad(temp0,pr+8);printf("%s",temp0);printf("\n");
+  printf("cn==tph||((%d+1)&3)<2 %d\n",l,cn==tph||((l+1)&3)<2 );   //If tph =1 R0F R1F R1C R2F R2C ......
+}
+}
+*/
+for(cn=0;cn<1+tph;cn++){
+ i0=i=0;
+ do{
+  for(j=0,max=-BIG;j<c0;j++){
+   for(k=0,s=0;k<d1;k++){
+    for(l=0,min=BIG;l<c1;l++){
+     if(cn==tph||((l+1)&3)<2)
+     {v=pv[k][l]+ev(i,j,k,l)-ev(i,ji[i],k,l);
+       if(v<min)min=v;}
+    }
+    s+=min;
+   }
+   if(s>max){max=s;j0=j;}
+  }
+  if(j0!=ji[i]){
+   for(k=0;k<d1;k++)for(l=0;l<c1;l++)pv[k][l]+=ev(i,j0,k,l)-ev(i,ji[i],k,l);
+   ji[i]=j0;i0=i;
+  }
+  i++;if(i==d0)i=0;
+ }while(i!=i0);
+}
+
+/*
+printf("Initial pure strategy for player %d:\n",pl);
+for(j=0;j<c0;j++){
+ descs(temp0,pl,j);printf("    --- %s ---\n",temp0);
+ for(i=0;i<d0;i++)if(ji[i]==j){
+  descc(temp0,pl,i);rpad(temp0,10);printf("%s",temp0);
+ }
+ printf("\n\n");
+}
+for(k=0,s=0;k<d1;k++){for(l=0,min=BIG;l<c1;l++)if(pv[k][l]<min)min=pv[k][l];s+=min;}
+printf("Value=%g\n",s/scale);
+*/
+/*
+--- R0C ---
+r22o      c32o      r32o      c42o      r42o      c52o      r52o      c62o      r62o      c72o      r72o      c82o      r82o      c92o      r92o      cT2o      rT2o      rJ2o      rQ2o      rK2o      rA2o      c32s      r32s      r33o      c43o      r43o      c53o      r53o      c63o      r63o      c73o      r73o      c83o      r83o      c93o      r93o      cT3o      rT3o      rJ3o      rQ3o      rK3o      rA3o      c42s      r42s      c43s      r43s      c54o      r54o      c64o      r64o      c74o      r74o      c84o      r84o      c94o      r94o      rT4o      rJ4o      rQ4o      rK4o      c52s      r52s      c53s      r53s      c54s      r54s      c65o      r65o      c75o      r75o      c85o      r85o      c95o      r95o      rT5o      rJ5o      rQ5o      rK5o      c62s      r62s      c63s      r63s      c64s      r64s      c65s      r65s      c76o      r76o      c86o      r86o      r96o      rT6o      rJ6o      rQ6o      rK6o      c72s      r72s      c73s      r73s      c74s      r74s      c75s      r75s      c76s      r76s      r87o      r97o      rT7o      rJ7o      rQ7o      rK7o      c82s      r82s      c83s      r83s      c84s      r84s      c85s      r85s      r86s      r87s      r98o      rT8o      rJ8o      rQ8o      rK8o      c92s      r92s      c93s      r93s      c94s      r94s      r95s      r96s      r97s      r98s      rT9o      rJ9o      rQ9o      rT2s      rT3s      rT4s      rT5s      rT6s      rT7s      rT8s      rT9s      rJTo      rQTo      rJ2s      rJ3s      rJ4s      rJ5s      rJ6s      rJ7s      rJ8s      rJ9s      rJTs      rQ2s      rQ3s      rQ4s      rQ5s      rQ6s      rQ7s      rQ8s      rQ9s      rK2s      rK3s      rK4s      rK5s      rK6s      rK7s
+
+--- R1 ---
+c22o      cJ2o      cQ2o      cK2o      cA2o      c33o      cJ3o      cQ3o      cK3o      cA3o      c44o      r44o      cT4o      cJ4o      cQ4o      cK4o      cA4o      rA4o      c55o      r55o      cT5o      cJ5o      cQ5o      cK5o      cA5o      rA5o      c66o      r66o      c96o      cT6o      cJ6o      cQ6o      cK6o      cA6o      rA6o      c77o      r77o      c87o      c97o      cT7o      cJ7o      cQ7o      cK7o      cA7o      rA7o      c86s      c87s      c88o      r88o      c98o      cT8o      cJ8o      cQ8o      cK8o      cA8o      rA8o      c95s      c96s      c97s      c98s      c99o      r99o      cT9o      cJ9o      cQ9o      cK9o      rK9o      cA9o      rA9o      cT2s      cT3s      cT4s      cT5s      cT6s      cT7s      cT8s      cT9s      cTTo      rTTo      cJTo      cQTo      cKTo      rKTo      cATo      rATo      cJ2s      cJ3s      cJ4s      cJ5s      cJ6s      cJ7s      cJ8s      cJ9s      cJTs      cJJo      rJJo      cQJo      rQJo      cKJo      rKJo      cAJo      rAJo      cQ2s      cQ3s      cQ4s      cQ5s      cQ6s      cQ7s      cQ8s      cQ9s      cQTs      rQTs      cQJs      rQJs      cQQo      rQQo      cKQo      rKQo      cAQo      rAQo      cK2s      cK3s      cK4s      cK5s      cK6s      cK7s      cK8s      rK8s      cK9s      rK9s      cKTs      rKTs      cKJs      rKJs      cKQs      rKQs      cKKo      rKKo      cAKo      rAKo      cA2s      rA2s      cA3s      rA3s      cA4s      rA4s      cA5s      rA5s      cA6s      rA6s      cA7s      rA7s      cA8s      rA8s      cA9s      rA9s      cATs      rATs      cAJs      rAJs      cAQs      rAQs      cAKs      rAKs      cAAo      rAAo
+
+Value=0.0266245
+*/
+// #define fnep(xxi,xxj) ((xxi)*c0+(xxj)+1)
+// #define fney(xxk,xxl) (d0*c0+(xxk)*c1+(xxl)+1)
+// #define fnem(xxi) (d0*c0+d1*c1+(xxi)+1)
+printf("Setting up tableau\n");
+for(k=0;k<d1;k++){
+ for(l=0,min=BIG;l<c1;l++){
+  for(i=0,s=0;i<d0;i++)s+=ev(i,ji[i],k,l);
+  if(s<min){min=s;lk[k]=l;}
+ }
+}
+
+// printf("c0=%d fnep=%d\n",c0,fnep(1,10) );   //14
+// printf("c0=%d d0=%d fney=%d\n",c0,d0,fney(1,10) ); //1030
+
+ind=1;
+for(i=0;i<d0;i++){mi[ind++]=fnep(i,ji[i]);}   // d0
+for(k=0;k<d1;k++)for(l=0;l<c1;l++)if(l!=lk[k])mi[ind++]=fney(k,l);  // d1(c1-1)
+for(k=0;k<d1;k++)mi[ind++]=fnem(k); // d1
+ind=1;
+for(i=0;i<d0;i++)for(j=0;j<c0;j++)if(j!=ji[i])ni[ind++]=fnep(i,j);  //d0*(c0-1)
+for(k=0;k<d1;k++)ni[ind++]=fney(k,lk[k]); // d1
+for(i=1;i<=m;i++)rc[mi[i]]=i;  // 1.2,..,(d1*c1+d0+1)
+for(i=1;i<=n;i++)rc[ni[i]]=i;  // (d1*c1+d0+1)+1,...,d0*c0+d1*c1+d1+1
+
+// Vars:        p(i,j)   (i<d0,j<c0)
+//              y(k,l)   (k<d1,l<c1)
+//              m(k)     (k<d1)
+// Equations:   m(k)+y(k,l)=sum_{i,j}p(i,j)ev(i,j,k,l)
+//              sum_j p(i,j)=1
+// Constraints: y(k,l)>=0, p(i,j)>=0, m(k)=anything
+// Objective: sum_k m(k)
+// Initialise so that p(i,ji[i]), y(k,not lk[k]), m(i) are basic = d1*c1+d0
+//                    p(i,not ji[i]), y(k,lk[k]) are non-basic = d0*(c0-1)+d1
+// int b[10];
+// size_t n = sizeof(b) / sizeof(int);
+// printf("%zu\n", n );   // length of array
+
+for(i=0;i<d0;i++){
+ t=rc[fnep(i,ji[i])];   // basic variables of d0, define 1 for non-basic variables
+ descc(temp0,pl,i);rpad(temp0,10);
+ descs(temp1,pl,ji[i]);rpad(temp1,10);
+ printf("t=%d ji[i]=%d i=%d c0=%d %s %s\n",t,ji[i],i,c0,temp0,temp1);
+ for(i1=0;i1<d0;i1++)for(j=0;j<c0;j++)if(j!=ji[i1])   // a[basic][non-basic]
+  {
+    a[rc[fnep(i,ji[i])]][rc[fnep(i1,j)]]=(i==i1);   // for given (i,j), (i,not j) => a[basic][non-basic] =1 d0*(c0-1)
+    if(i==i1)
+  printf("a[%d][%d]= %f i=%d j=%d\n", rc[fnep(i,ji[i])],rc[fnep(i1,j)],a[rc[fnep(i,ji[i])]][rc[fnep(i1,j)]],i,j);
+  }
+ for(k=0;k<d1;k++)a[t][rc[fney(k,lk[k])]]=0;
+}
+
+// a=(double (*)[n+1])malloc((m+1)*(n+1)*sizeof(double));
+for(k=0;k<d1;k++)for(l=0;l<c1;l++)if(l!=lk[k]){
+ t=rc[fney(k,l)];    // basic variables of k, not lk(k)
+ for(i=0;i<d0;i++)for(j=0;j<c0;j++)if(j!=ji[i])                                           // non-basic variables
+  a[t][rc[fnep(i,j)]]=-(ev(i,j,k,l)-ev(i,ji[i],k,l)-ev(i,j,k,lk[k])+ev(i,ji[i],k,lk[k])); // d0*(c0-1)
+ for(k1=0;k1<d1;k1++)a[t][rc[fney(k1,lk[k1])]]=-(k==k1);                                  // d1
+ for(i=0,s=0;i<d0;i++)s+=ev(i,ji[i],k,l)-ev(i,ji[i],k,lk[k]);a[t][0]=s;                   //
+}
+
+for(k=0;k<d1;k++){
+ t=rc[fnem(k)];     // basic variables of m(k)
+ for(i=0;i<d0;i++)for(j=0;j<c0;j++)if(j!=ji[i])
+  a[t][rc[fnep(i,j)]]=-(ev(i,j,k,lk[k])-ev(i,ji[i],k,lk[k]));
+ for(k1=0;k1<d1;k1++)a[t][rc[fney(k1,lk[k1])]]=(k==k1);
+ for(i=0,s=0;i<d0;i++)s+=ev(i,ji[i],k,lk[k]);a[t][0]=s;
+}
+
+for(j=0;j<=n;j++){
+ for(k=0,s=0;k<d1;k++)s+=a[rc[fnem(k)]][j];
+ a[0][j]=s;
+}
+for(i=1;i<=m;i++)a[i][0]+=EP4*drand48();
+for(j=1;j<=n;j++)a[0][j]+=EP4*drand48();
+
+
+
+}
 
 return 0;
 }
-
+void rpad(char *buf,int n){int i;for(i=strlen(buf);i<n;i++)buf[i]=' ';buf[i]=0;}
 void lpad(char *buf,int n){int i,s;
 s=strlen(buf);if(s<n){
  for(i=n-1;i>=n-s;i--)buf[i]=buf[i-(n-s)];
