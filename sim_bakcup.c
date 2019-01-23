@@ -75,15 +75,19 @@ printf("ante=%g blind=%g (%s)\n",an,bl,liv?"LIVE":"NON-LIVE");
 for(i=0;i<13;i++)for(j=0;j<13;j++)
  sprintf(hs[i*13+j],"%c%c%c",i>=j?cd[i+2]:cd[j+2],
   i>=j?cd[j+2]:cd[i+2],"os"[i>j]);
-fp=popen("gunzip -c fa2n.gz","r");
+// fp=popen("gunzip -c fa2n.gz","r");
+fp=fopen("fa2n","r");
+
 if(fp==0){printf("Couldn't open EV file\n");exit(0);}
 for(i=0;i<169;i++)for(j=0;j<169;j++)fscanf(fp,"%*s %*s %lf",&wa[i][j]);
-pclose(fp);
+// pclose(fp);
+fclose(fp);
 for(i=0;i<169;i++)for(j=0;j<169;j++){
  x=fabs(wa[i][j]+wa[j][i]);
  if(x>1e-5)printf("Error of %g at %d,%d\n",x,i,j);
 }
 {int i0,i1,j0,j1,s0,s1,s2,s3,n,t;
+// float total=0;
 t=0;
 for(i=0;i<169;i++)for(j=0;j<169;j++){
  i0=i/13;i1=i%13;j0=j/13;j1=j%13;
@@ -94,13 +98,16 @@ for(i=0;i<169;i++)for(j=0;j<169;j++){
  if(i0==i1)n/=2;
  if(j0==j1)n/=2;
  t+=n;
+ // total+=wa[i][j];   //total = -0.004034
  prob[i][j]=n;
 }
 if(t!=52*51*50*49/(2*2)){printf("Error: total count=%d\n",t);exit(0);}
 for(i=0;i<169;i++)for(j=0;j<169;j++)prob[i][j]*=169.0*169.0/t;
+// printf("total = %f\n",total );
 }
 if(list)for(i=0;i<169;i++)for(j=0;j<169;j++){
- x=wa[i][j]/prob[i][j];printf("%s %s    P(win)=%8.6f    EV=%9.6f\n",hs[i],hs[j],(x+1)/2,x);}
+ x=wa[i][j]/prob[i][j];
+ printf("%s %s    P(win)=%8.6f    EV=%9.6f\n",hs[i],hs[j],(x+1)/2,x);}
 #endif
 
 c0=2*nr+1;c1=2*nr+2+(2*nr-1)*liv;
@@ -137,10 +144,24 @@ for(i=0;i<d0;i++)for(k=0;k<d1;k++){
 // Objective: sum_k m(k)
 // Initialise so that p(i,ji[i]), y(k,not lk[k]), m(i) are basic
 //                    p(i,not ji[i]), y(k,lk[k]) are non-basic
-//
+
+/*
+         i,not ji[i]                                                       constants                     y(k,lk[k])
+m(k) =  - Sum_{i,not ji[i]} p(i,j)*(ev(i,j[i],k,lk[k]) - ev(i,j,k,lk[k])) + Sum_{i, ji[i]} p(i,j)*(ev(i,ji[i],k,lk[k])) - {y(k,lk[k])}
+(*1*)
+y(k, not lk[k]) = Sum_{i,j} p(i,j)*(ev(i,j,k,l)) - m(k)
+                = Sum_{i,not ji[i]} p(i,j)*(ev(i,j,k,l)) + Sum_{i,ji[i]} p(i,j)*(ev(i,j,k,l)) - m(k)
+                = Sum_{i,not ji[i]} p(i,j)*(ev(i,j,l,l) - ev(i,j,k,lk[k]) + ev(i,ji[i],k,lk[k])) + Sum_{i,ji[i]} p(i,j)*(ev(i,j,k,l) - ev(i,j,k,lk[k]))  -{y(k,lk[k])}
+
+y(k, not lk[k]) = Sum_{i,not ji[i]} p(i,j)*(ev(i,j,l,l) - ev(i,j,k,lk[k]) + ev(i,ji[i],k,lk[k]) - ev(i,j,k,lk[k])) + Sum_{i,ji[i]} p(i,j)*(ev(i,j,k,l) - ev(i,j,k,lk[k])) -{y(k,lk[k])}
+(*2*)
+
+p(i, ji[i]) = - p(i, not ji[i]) + 1
+(*3*)
+*/
 // Variable numbers of P(i,j) are 1...d0*c0
 // Variable numbers of Y(k,l) are d0*c0+1...d0*c0+d1*c1
-// Variable numbers of M(k)   are d0*c0+d1*c1+1...d0*c1+d1*(c1+1)
+// Variable numbers of M(k)   are d0*c0+d1*c1+1...d0*c0+d1*(c1+1)
 
 scale=d0*d1/(1+liv);
 printf("Finding initial pure strategy\n");
@@ -193,13 +214,17 @@ for(k=0;k<d1;k++){
  }
 }
 
+// #define fnep(xxi,xxj) ((xxi)*c0+(xxj)+1)         (<=d0*c0)
+// #define fney(xxk,xxl) (d0*c0+(xxk)*c1+(xxl)+1)   (<=d0*c0+d1*c1)
+// #define fnem(xxi) (d0*c0+d1*c1+(xxi)+1)          (<=d0*c0+d1*c1+d0)
+
 ind=1;
-for(i=0;i<d0;i++)mi[ind++]=fnep(i,ji[i]);
-for(k=0;k<d1;k++)for(l=0;l<c1;l++)if(l!=lk[k])mi[ind++]=fney(k,l);
-for(k=0;k<d1;k++)mi[ind++]=fnem(k);
+for(i=0;i<d0;i++)mi[ind++]=fnep(i,ji[i]);     // mi[1~do] <= (c0-1)*do+(c0-1) + 1 = d0*c0
+for(k=0;k<d1;k++)for(l=0;l<c1;l++)if(l!=lk[k])mi[ind++]=fney(k,l); // mi[(do+1) ~ (do+d1*(c1-1)] <= d0*c0 + (d1-1)*c1 + (c1-1)+1 = d0*c0 + d1*c1
+for(k=0;k<d1;k++)mi[ind++]=fnem(k);  // mi[d0+d1*(c1-1)+1 ~ d0+d1*(c1-1)+d1] <= d0*c0+d1*c1+d0
 ind=1;
-for(i=0;i<d0;i++)for(j=0;j<c0;j++)if(j!=ji[i])ni[ind++]=fnep(i,j);
-for(k=0;k<d1;k++)ni[ind++]=fney(k,lk[k]);
+for(i=0;i<d0;i++)for(j=0;j<c0;j++)if(j!=ji[i])ni[ind++]=fnep(i,j);  // ni[1~(d0-1)*c0] <= (d0-1)*c0+c0-1+1= d0*c0
+for(k=0;k<d1;k++)ni[ind++]=fney(k,lk[k]);    // ni[(d0-1)*c0+1 ~ (d0-1)*c0 + d1]  <= d0*c0+d1*c1
 for(i=1;i<=m;i++)rc[mi[i]]=i;
 for(i=1;i<=n;i++)rc[ni[i]]=i;
 
@@ -214,8 +239,7 @@ for(k=0;k<d1;k++)for(l=0;l<c1;l++)if(l!=lk[k]){
  t=rc[fney(k,l)];
  for(i=0;i<d0;i++)for(j=0;j<c0;j++)if(j!=ji[i])
   a[t][rc[fnep(i,j)]]=-(ev(i,j,k,l)-ev(i,ji[i],k,l)-ev(i,j,k,lk[k])+ev(i,ji[i],k,lk[k]));
- for(k1=0;k1<d1;k1++)a[t][rc[fney(k1,lk[k1])]]=-(k==k1);
- for(i=0,s=0;i<d0;i++)s+=ev(i,ji[i],k,l)-ev(i,ji[i],k,lk[k]);a[t][0]=s;
+  for(i=0,s=0;i<d0;i++)s+=ev(i,ji[i],k,l)-ev(i,ji[i],k,lk[k]);a[t][0]=s;
 }
 for(k=0;k<d1;k++){
  t=rc[fnem(k)];
@@ -235,14 +259,17 @@ it=0;
 //procp(m,n,c0,c1,d0,d1,a,mi,ni);
 ep1=ep2=ep3=-BIG;
 Ep1=Ep2=Ep3=BIG;
+// Variable numbers of P(i,j) are 1...d0*c0
+// Variable numbers of Y(k,l) are d0*c0+1...d0*c0+d1*c1
+// Variable numbers of M(k)   are d0*c0+d1*c1+1...d0*c0+d1*(c1+1)
 
 while(1){
 for(i=1;i<=m;i++)rc[mi[i]]=-i;
 for(i=1;i<=n;i++)rc[ni[i]]=i;
 g=-BIG;
 for(j=1;j<=n;j++){
- if(ni[j]>d0*c0+d1*c1&&a[0][j]>0)for(i=0;i<=m;i++)a[i][j]=-a[i][j];
- if(a[0][j]>-EP1){if(-a[0][j]>ep1)ep1=-a[0][j];continue;}
+ if(ni[j]>d0*c0+d1*c1&&a[0][j]>0)for(i=0;i<=m;i++)a[i][j]=-a[i][j];  // row of j, negate all coefficients
+ if(a[0][j]>-EP1){if(-a[0][j]>ep1)ep1=-a[0][j];continue;}   //  a[0][j] (-inf,+inf)
  if(-a[0][j]<Ep1)Ep1=-a[0][j];
  s=BIG;s1=0;
  for(i=1;i<=m;i++){
@@ -284,7 +311,7 @@ it++;
 //procp(m,n,c0,c1,d0,d1,a,mi,ni);
 }
 
-printf("\nDONE.  Time=%lds\n",time(NULL)-t0);
+printf("\nDONE.  Time=%lu\n",time(NULL)-t0);
 for(i=0;i<=m+n;i++)xx[i]=0;
 for(i=1;i<=m;i++)xx[mi[i]]=a[i][0];
 for(i=0;i<d0;i++)for(j=0;j<c0;j++)p[i][j]=xx[fnep(i,j)];
@@ -347,10 +374,6 @@ printf("     ");
 for(j=0;j<cx;j++){descs(temp0,px,j);lpad(temp0,pr+8);printf("%s",temp0);}printf("\n");
 for(i=0;i<dx;i++)if(!pure[i]){descc(temp0,px,i);lpad(temp0,5);printf("%s  ",temp0);
  for(j=0;j<cx;j++)printf("%*.*g  ",pr+6,pr,p[i][j]);printf("\n");}
-
- printf("%f\n", ev(0,0,0,0));
- descc(temp0,pl,0);rpad(temp0,10);printf("%s",temp0);printf("\n");
-
 }
 
 void pivot(int m,int n,int i1,int j1,int *mi,int *ni,double (*a)[n+1]){
@@ -471,7 +494,7 @@ return ev;
 //
 // descs(char *buf,int pl,int st) should return into buf a short string describing strategy
 // number st of player pl (using the pl passed to it).
-// descc(char *bug,int pl,int i) should return into buf a short string describing situation number i
+// descc(char *buf,int pl,int i) should return into buf a short string describing situation number i
 //
 // Let Px denote Player pl, Py denote Player 1-pl (using the global pl).
 //

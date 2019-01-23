@@ -105,8 +105,8 @@ if(list)for(i=0;i<169;i++)for(j=0;j<169;j++){
  total+=wa[i][j];
  printf("%s %s    P(win)=%8.6f    EV=%9.6f prob=%9.6f\n",hs[i],hs[j],(x+1)/2,x,prob[i][j]);}
 #endif
-
-// descc(temp0,pl,0);rpad(temp0,10);printf("%s",temp0);printf("\n");
+printf("test\n" );
+descc(temp0,pl,0);rpad(temp0,10);printf("%s",temp0);printf("\n");
 // descc(temp1,pl,0);lpad(temp1,10);printf("%s",temp1);printf("\n");
 }
 
@@ -247,17 +247,35 @@ for(i=1;i<=n;i++)rc[ni[i]]=i;  // (d1*c1+d0+1)+1,...,d0*c0+d1*c1+d1+1
 // printf("%zu\n", n );   // length of array
 
 for(i=0;i<d0;i++){
- t=rc[fnep(i,ji[i])];   // basic variables of d0, define 1 for non-basic variables
+  for (j = 0; j < c0; j++) {
+    /* code */
+
+ // t=rc[fnep(i,ji[i])];   // basic variables of d0, define 1 for non-basic variables
  descc(temp0,pl,i);rpad(temp0,10);
- descs(temp1,pl,ji[i]);rpad(temp1,10);
- printf("t=%d ji[i]=%d i=%d c0=%d %s %s\n",t,ji[i],i,c0,temp0,temp1);
- for(i1=0;i1<d0;i1++)for(j=0;j<c0;j++)if(j!=ji[i1])   // a[basic][non-basic]
-  {
-    a[rc[fnep(i,ji[i])]][rc[fnep(i1,j)]]=(i==i1);   // for given (i,j), (i,not j) => a[basic][non-basic] =1 d0*(c0-1)
-    if(i==i1)
-  printf("a[%d][%d]= %f i=%d j=%d\n", rc[fnep(i,ji[i])],rc[fnep(i1,j)],a[rc[fnep(i,ji[i])]][rc[fnep(i1,j)]],i,j);
-  }
- for(k=0;k<d1;k++)a[t][rc[fney(k,lk[k])]]=0;
+ descs(temp1,pl,j);rpad(temp1,10);
+ printf("i=%d j=%d %s %s\n",i,j,temp0,temp1);
+
+
+}
+ // for(i1=0;i1<d0;i1++)for(j=0;j<c0;j++)if(j!=ji[i1])   // a[basic][non-basic]
+ //  {
+ //    a[rc[fnep(i,ji[i])]][rc[fnep(i1,j)]]=(i==i1);   // for given (i,j), (i,not j) => a[basic][non-basic] =1 d0*(c0-1)
+ //  //   if(i==i1)
+ //  // printf("a[%d][%d]= %f i=%d j=%d\n", rc[fnep(i,ji[i])],rc[fnep(i1,j)],a[rc[fnep(i,ji[i])]][rc[fnep(i1,j)]],i,j);
+ //  }
+ // for(k=0;k<d1;k++)a[t][rc[fney(k,lk[k])]]=0;
+}
+
+for(k=0;k<d1;k++){
+  for (l = 0; l < c1; l++) {
+
+ descc(temp0,1-pl,k);rpad(temp0,10);
+ descs(temp1,1-pl,l);rpad(temp1,10);
+ printf("k=%d l=%d %s %s\n",k,l,temp0,temp1);
+
+
+}
+
 }
 
 // a=(double (*)[n+1])malloc((m+1)*(n+1)*sizeof(double));
