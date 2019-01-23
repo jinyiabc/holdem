@@ -266,6 +266,7 @@ for(i=0;i<d0;i++){
  // for(k=0;k<d1;k++)a[t][rc[fney(k,lk[k])]]=0;
 }
 
+/*
 for(k=0;k<d1;k++){
   for (l = 0; l < c1; l++) {
 
@@ -277,6 +278,7 @@ for(k=0;k<d1;k++){
 }
 
 }
+*/
 
 // a=(double (*)[n+1])malloc((m+1)*(n+1)*sizeof(double));
 for(k=0;k<d1;k++)for(l=0;l<c1;l++)if(l!=lk[k]){
@@ -323,7 +325,13 @@ sprintf(buf,"%sR%d%c",((st&3)>=2)?"C":"",st/4,(st&1)?'C':'F');
 }
 #ifdef HOLDEM
 void descc(char *buf,int px,int i){
-if(px==1||liv==0)sprintf(buf,"%s",hs[i]); else sprintf(buf,"%c%s",(i&1)?'r':'c',hs[i/2]);
+  if (i == 336) {
+    // printf("TEST\n" );
+    i=i+1;
+    if(px==1||liv==0)sprintf(buf,"%s",hs[i]); else sprintf(buf,"%c%s",(i&1)?'r':'c',hs[i/2]);
+  } else {
+    if(px==1||liv==0)sprintf(buf,"%s",hs[i]); else sprintf(buf,"%c%s",(i&1)?'r':'c',hs[i/2]);
+  }
 }
 #else
 void descc(char *buf,int px,int i){

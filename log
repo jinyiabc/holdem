@@ -288,3 +288,35 @@ main seed=1548259770 an=0.5 bl=0.5 lim=1 r=1 liv=1\
  d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
 main seed=1548259795 an=0.5 bl=0.5 lim=1 r=1 liv=1\
  d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548261769 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548262111 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548266336 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548266625 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548266655 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548267129 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=337 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548267270 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=337 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548267978 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548268243 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548268269 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548268412 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548268834 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=337 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548268849 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=337 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+SIM seed=1548268858 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=337 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548268994 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=337 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548269224 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
