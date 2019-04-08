@@ -320,3 +320,225 @@ sim seed=1548268994 an=0 bl=1 lim=1 r=1 liv=1\
  d0=337 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
 sim seed=1548269224 an=0 bl=1 lim=1 r=1 liv=1\
  d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548269427 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548299632 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548299750 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim1 seed=1548299822 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=337 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim1 seed=1548299846 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=337 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548299862 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548300419 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548300426 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim1 seed=1548300474 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=337 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim1 seed=1548300498 an=0.5 bl=1 lim=1 r=1 liv=1\
+ d0=337 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548300513 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim1 seed=1548300524 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=337 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim1 seed=1548300531 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=337 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548300712 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548301057 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548301157 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim1 seed=1548302294 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim1 seed=1548303114 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548303555 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548303585 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim1 seed=1548303708 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim1 seed=1548304104 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim1 seed=1548304166 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim1 seed=1548304396 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim1 seed=1548304954 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim1 seed=1548305123 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548305144 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548305157 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548309895 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=8 d1=4 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548310021 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=6 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548311517 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=6 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548311854 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=6 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim2 seed=1548312246 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=3 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548312298 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=6 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548312343 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=6 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim2 seed=1548312405 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=3 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548312457 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=6 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim2 seed=1548312531 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=3 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548312549 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=6 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548317788 an=0 bl=1 lim=1 r=1 liv=0\
+ d0=3 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548317808 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=6 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548318202 an=0 bl=1 lim=1 r=1 liv=0\
+ d0=3 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548318473 an=0.5 bl=0.5 lim=1 r=1 liv=0\
+ d0=3 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548318545 an=0 bl=1 lim=1 r=1 liv=0\
+ d0=3 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548318589 an=0 bl=1 lim=1 r=1 liv=0\
+ d0=3 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548318592 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=6 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548319821 an=0 bl=1 lim=1 r=1 liv=0\
+ d0=3 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548319845 an=0 bl=1 lim=1 r=1 liv=1\
+ d0=6 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548319863 an=0 bl=1 lim=1 r=1 liv=0\
+ d0=3 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548321668 an=0.5 bl=0.5 lim=1 r=1 liv=0\
+ d0=3 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548322016 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548322042 an=0.5 bl=0.5 lim=1 r=10 liv=0\
+ d0=84 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548322101 an=0.5 bl=0.5 lim=1 r=9 liv=0\
+ d0=84 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548328511 an=0.5 bl=0.5 lim=1 r=9 liv=0\
+ d0=84 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548329052 an=0.5 bl=0.5 lim=0 r=1 liv=0\
+ d0=84 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548329369 an=0.5 bl=0.5 lim=0 r=9 liv=0\
+ d0=84 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548329653 an=0.5 bl=0.5 lim=0 r=9 liv=0\
+ d0=84 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548329742 an=0.5 bl=0.5 lim=0 r=9 liv=0\
+ d0=84 d1=169 nr=0 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548329837 an=0.5 bl=0.5 lim=0 r=9 liv=0\
+ d0=84 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim2 seed=1548331982 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548331987 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=3 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim2 seed=1548332017 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=3 d1=3 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548332673 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548333149 an=0.5 bl=0.5 lim=1 r=1 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548333286 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548333316 an=0.5 bl=0.5 lim=1 r=1 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548333854 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548333909 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548334499 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548334515 an=0.5 bl=0.5 lim=1 r=1 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548334634 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548336068 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548336414 an=0.5 bl=0.5 lim=1 r=1 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548336647 an=0.5 bl=0.5 lim=1 r=1 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548336826 an=0.5 bl=0.5 lim=1 r=1 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548337215 an=0.5 bl=0.5 lim=1 r=1 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548337317 an=0.5 bl=0.5 lim=1 r=1 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+main seed=1548337467 an=0.5 bl=0.5 lim=1 r=1 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548337607 an=0.5 bl=0.5 lim=1 r=1 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548337721 an=0.5 bl=0.5 lim=1 r=1 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548339236 an=0.5 bl=0.5 lim=1 r=1 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548339245 an=0.5 bl=0.5 lim=1 r=1 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548339260 an=0.5 bl=5 lim=1 r=10 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548339462 an=0.5 bl=5 lim=1 r=10 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548339698 an=0.5 bl=5 lim=1 r=10 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548339704 an=0.5 bl=5 lim=1 r=10 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548340514 an=0.5 bl=5 lim=1 r=10 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548340642 an=0.5 bl=1.5 lim=1 r=3 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548340675 an=0.5 bl=24.5 lim=1 r=49 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548340809 an=0.5 bl=4.5 lim=1 r=9 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548340867 an=0.5 bl=4.5 lim=1 r=9 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548340872 an=0.5 bl=4.5 lim=1 r=9 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548340900 an=0.5 bl=4.5 lim=1 r=9 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548340982 an=0.5 bl=4.5 lim=1 r=9 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548341232 an=0.5 bl=4.5 lim=1 r=9 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548341524 an=0.5 bl=4.5 lim=1 r=9 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548341890 an=0.5 bl=4.5 lim=1 r=9 liv=1\
+ d0=338 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548341908 an=0.5 bl=4.5 lim=1 r=9 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548341966 an=0.5 bl=4.5 lim=1 r=9 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548342338 an=0.5 bl=1 lim=1 r=9 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548342503 an=0.5 bl=0.5 lim=1 r=10 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548342508 an=0.5 bl=0.5 lim=1 r=9 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548342545 an=0.5 bl=0.5 lim=1 r=9 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548342568 an=0.5 bl=0.5 lim=1 r=4 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548342581 an=0.5 bl=0.5 lim=1 r=1 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548342678 an=0.5 bl=0.5 lim=1 r=0 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548342690 an=0.5 bl=0.5 lim=1 r=1 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548343228 an=0.5 bl=0.5 lim=1 r=99 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548343275 an=0.5 bl=0.5 lim=1 r=74 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548389384 an=0.5 bl=0.5 lim=1 r=74 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1548390091 an=0.5 bl=0.5 lim=1 r=49 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0

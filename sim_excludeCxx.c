@@ -56,6 +56,8 @@ for(i=1;i<ac;i++){l0=strchr(av[i],'=');if(l0){
 }}
 if(blf==0)bl=lim?r/2:r/2;//2*r*an;
 if(d0f==0)d0=(1+liv)*d;
+//Exclude cAA
+d0 = d0/2;
 if(d1f==0)d1=d;
 fp=fopen("log","a");
 if(fp==0){printf("Couldn't open log file\n");exit(0);}
@@ -192,7 +194,6 @@ for(k=0;k<d1;k++){
   if(s<min){min=s;lk[k]=l;}
  }
 }
-
 ind=1;
 for(i=0;i<d0;i++)mi[ind++]=fnep(i,ji[i]);
 for(k=0;k<d1;k++)for(l=0;l<c1;l++)if(l!=lk[k])mi[ind++]=fney(k,l);
@@ -284,7 +285,7 @@ it++;
 //procp(m,n,c0,c1,d0,d1,a,mi,ni);
 }
 
-printf("\nDONE.  Time=%ds\n",time(NULL)-t0);
+printf("\nDONE.  Time=%lds\n",time(NULL)-t0);
 for(i=0;i<=m+n;i++)xx[i]=0;
 for(i=1;i<=m;i++)xx[mi[i]]=a[i][0];
 for(i=0;i<d0;i++)for(j=0;j<c0;j++)p[i][j]=xx[fnep(i,j)];
@@ -347,6 +348,10 @@ printf("     ");
 for(j=0;j<cx;j++){descs(temp0,px,j);lpad(temp0,pr+8);printf("%s",temp0);}printf("\n");
 for(i=0;i<dx;i++)if(!pure[i]){descc(temp0,px,i);lpad(temp0,5);printf("%s  ",temp0);
  for(j=0;j<cx;j++)printf("%*.*g  ",pr+6,pr,p[i][j]);printf("\n");}
+
+ printf("%f\n", ev(0,0,0,0));
+ descc(temp0,pl,0);rpad(temp0,10);printf("%s",temp0);printf("\n");
+
 }
 
 void pivot(int m,int n,int i1,int j1,int *mi,int *ni,double (*a)[n+1]){
@@ -432,7 +437,13 @@ sprintf(buf,"%sR%d%c",((st&3)>=2)?"C":"",st/4,(st&1)?'C':'F');
 }
 #ifdef HOLDEM
 void descc(char *buf,int px,int i){
-if(px==1||liv==0)sprintf(buf,"%s",hs[i]); else sprintf(buf,"%c%s",(i&1)?'r':'c',hs[i/2]);
+      if (px == 0) {
+        i=i*2+1;
+      } else {
+        i=i;
+      }
+      if(px==1||liv==0)sprintf(buf,"%s",hs[i]); else sprintf(buf,"%c%s",(i&1)?'r':'c',hs[i/2]);
+
 }
 #else
 void descc(char *buf,int px,int i){
@@ -442,7 +453,15 @@ if(px==1||liv==0)sprintf(buf,"%d",i); else sprintf(buf,"%c%d",(i&1)?'r':'c',i/2)
 double ev(int i0,int s0,int i1,int s1){
 int r0,r1,a1,o0,o1,c,t,rr,cf;
 double ev,make;
-if(pl==1){t=i0;i0=i1;i1=t; t=s0;s0=s1;s1=t;}
+
+// i0 = i0*2+1;
+
+if(pl==1){t=i0;i0=i1;i1=t; t=s0;s0=s1;s1=t;
+    i1 = i1*2 +1;
+} else {
+    i0 = i0*2+1;
+}
+
 if(liv==0) {r0=s0>>1;o0=s0&1;r1=s1>>1;o1=s1&1;c=0;} else
  {r0=s0>>1;o0=s0&1;s1+=(s1>=1);r1=s1>>2;o1=s1&1;c=(s1&2)>>1; if((i0&1)==c)return 0; else i0=i0>>1;}
 a1=r1+c;

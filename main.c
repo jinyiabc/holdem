@@ -14,7 +14,7 @@ double ev();
 void pivot(),procp(),descs(),descc(),descv(),lpad(),rpad(),spc(),prp();
 int nr,pr,pl,lim,liv;
 double r,an,bl;
-char temp0[100],temp1[100];
+char temp0[100],temp1[100],temp2[100],temp3[100];
 #ifdef HOLDEM
 double wa[169][169],prob[169][169];
 char hs[169][4];
@@ -110,7 +110,9 @@ descc(temp0,pl,0);rpad(temp0,10);printf("%s",temp0);printf("\n");
 // descc(temp1,pl,0);lpad(temp1,10);printf("%s",temp1);printf("\n");
 }
 
-c0=2*nr+1;c1=2*nr+2+(2*nr-1)*liv;
+// c0=2*nr+1;c1=2*nr+2+(2*nr-1)*liv;
+c0 = 2; c1 = 2;
+
 if(pl==1){i=c0;c0=c1;c1=i;i=d0;d0=d1;d1=i;}
 n=d0*(c0-1)+d1; //#variables-#constraints=#"non-basic" variables=dim(complex) ==> var=0
 m=    d1*c1+d0; //#constraints=#"basic" variables
@@ -248,12 +250,21 @@ for(i=1;i<=n;i++)rc[ni[i]]=i;  // (d1*c1+d0+1)+1,...,d0*c0+d1*c1+d1+1
 
 for(i=0;i<d0;i++){
   for (j = 0; j < c0; j++) {
-    /* code */
+for (int k = 0; k < d1; k++) {
+for (int l = 0; l < c1; l++) {
+  descc(temp0,pl,i);rpad(temp0,10);
+  descs(temp1,pl,j);rpad(temp1,10);
+  descc(temp2,1-pl,k);rpad(temp2,10);
+  descs(temp3,1-pl,l);rpad(temp3,10);
+  printf("ev(%d,%d,%d,%d)=%f %s %s %s %s\n",i,j,k,l,ev(i,j,k,l),temp0,temp1,temp2,temp3);
 
+}
+}
  // t=rc[fnep(i,ji[i])];   // basic variables of d0, define 1 for non-basic variables
- descc(temp0,pl,i);rpad(temp0,10);
- descs(temp1,pl,j);rpad(temp1,10);
- printf("i=%d j=%d %s %s\n",i,j,temp0,temp1);
+ // descc(temp0,pl,i);rpad(temp0,10);
+ // descs(temp1,pl,j);rpad(temp1,10);
+ // descs(temp2,1-pl,j);rpad(temp2,10);
+ // printf("i=%d j=%d %s %s %s\n",i,j,temp0,temp1,temp2);
 
 
 }
@@ -265,6 +276,8 @@ for(i=0;i<d0;i++){
  //  }
  // for(k=0;k<d1;k++)a[t][rc[fney(k,lk[k])]]=0;
 }
+
+printf("test %d %d\n", 10/3, 10%3 );
 
 /*
 for(k=0;k<d1;k++){
@@ -318,20 +331,29 @@ s=strlen(buf);if(s<n){
  buf[n]=0;
 }}
 void descs(char *buf,int px,int st){
-if(px==0&&st==2*nr){sprintf(buf,"R%d",nr);return;}
-if(px==0||liv==0){sprintf(buf,"R%d%c",st/2,(st&1)?'C':'F');return;}
-st+=(st>=1);
-sprintf(buf,"%sR%d%c",((st&3)>=2)?"C":"",st/4,(st&1)?'C':'F');
+// if(px==0&&st==2*nr){sprintf(buf,"R%d",nr);return;}
+// if(px==0||liv==0){sprintf(buf,"R%d%c",st/2,(st&1)?'C':'F');return;}
+// st+=(st>=1);
+// sprintf(buf,"%sR%d%c",((st&3)>=2)?"C":"",st/4,(st&1)?'C':'F');
+if (px == 0) {
+  sprintf(buf,"%s",(st%2 == 0)?"Fold":"Call");
+} else {
+  sprintf(buf,"%s",(st%2 == 0)?"Fold":"Jam");
+}
 }
 #ifdef HOLDEM
 void descc(char *buf,int px,int i){
-  if (i == 336) {
-    // printf("TEST\n" );
-    i=i+1;
-    if(px==1||liv==0)sprintf(buf,"%s",hs[i]); else sprintf(buf,"%c%s",(i&1)?'r':'c',hs[i/2]);
-  } else {
-    if(px==1||liv==0)sprintf(buf,"%s",hs[i]); else sprintf(buf,"%c%s",(i&1)?'r':'c',hs[i/2]);
-  }
+
+  for (int j = 0; j < 169 ; j++) {
+    if (i == 2*j) {
+      // printf("TEST\n" );
+      i=i+1;
+      if(px==1||liv==0)sprintf(buf,"%s",hs[i]); else sprintf(buf,"%c%s",(i&1)?'r':'c',hs[i/2]);
+    } else {
+      if(px==1||liv==0)sprintf(buf,"%s",hs[i]); else sprintf(buf,"%c%s",(i&1)?'r':'c',hs[i/2]);
+    }
+
+    }
 }
 #else
 void descc(char *buf,int px,int i){
@@ -342,14 +364,22 @@ double ev(int i0,int s0,int i1,int s1){
 int r0,r1,a1,o0,o1,c,t,rr,cf;
 double ev,make;
 if(pl==1){t=i0;i0=i1;i1=t; t=s0;s0=s1;s1=t;}
-if(liv==0) {r0=s0>>1;o0=s0&1;r1=s1>>1;o1=s1&1;c=0;} else
- {r0=s0>>1;o0=s0&1;s1+=(s1>=1);r1=s1>>2;o1=s1&1;c=(s1&2)>>1; if((i0&1)==c)return 0; else i0=i0>>1;}
-a1=r1+c;
-if(r0>=a1&&o1==0) {rr=2*r1+c;cf=1;}                  // P1 F after making r1 raises
-if(r0>=a1&&o1==1) {rr=2*r1+c+1;cf=0;}                // P1 C after making r1 raises
-if(r0< a1&&o0==0) {rr=2*r0+1-c+(r0==0&&c==1);cf=-1;} // P0 F after making r0 (voluntary) raises
-if(r0< a1&&o0==1) {rr=2*r0+2-c;cf=0;}                // P0 C after making r0 (voluntary) raises
-if(rr==0)make=an; else {if(lim)make=an+bl+r*(rr-1); else make=(an+bl)*pow(1+2*r,rr-1);}
+// if(liv==0) {r0=s0>>1;o0=s0&1;r1=s1>>1;o1=s1&1;c=0;} else
+//  {r0=s0>>1;o0=s0&1;s1+=(s1>=1);r1=s1>>2;o1=s1&1;c=(s1&2)>>1; if((i0&1)==c)return 0; else i0=i0>>1;}
+// a1=r1+c;
+// if(r0>=a1&&o1==0) {rr=2*r1+c;cf=1;}                  // P1 F after making r1 raises
+// if(r0>=a1&&o1==1) {rr=2*r1+c+1;cf=0;}                // P1 C after making r1 raises
+// if(r0< a1&&o0==0) {rr=2*r0+1-c+(r0==0&&c==1);cf=-1;} // P0 F after making r0 (voluntary) raises
+// if(r0< a1&&o0==1) {rr=2*r0+2-c;cf=0;}                // P0 C after making r0 (voluntary) raises
+// s0=0 fold s0=1 call s1=0 fold s1=1 jam
+if (s0==0 && s1==0) {make=an;}   // fold and fold
+if (s0==0 && s1==1) {make=an+bl;} // fold and jam
+if (s0==1 && s1==0) {make=an;}   // call and fold
+if (s0==1 && s1==1) {make=an+bl+r;} // call and jam
+
+// printf("%f %d %d\n",make,i0,i1 );
+
+// if(rr==0)make=an; else {if(lim)make=an+bl+r*(rr-1); else make=(an+bl)*pow(1+2*r,rr-1);}
 #ifdef HOLDEM
 if(cf==0)ev=make*wa[i0][i1]; else ev=make*prob[i0][i1]*cf;
 #else
