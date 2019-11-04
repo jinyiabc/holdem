@@ -542,3 +542,39 @@ sim seed=1548389384 an=0.5 bl=0.5 lim=1 r=74 liv=0\
  d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
 sim seed=1548390091 an=0.5 bl=0.5 lim=1 r=49 liv=0\
  d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1572875548 an=0.5 bl=0.5 lim=1 r=2 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1572875756 an=0.5 bl=0.5 lim=1 r=2 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1572876192 an=0.5 bl=0.5 lim=1 r=2 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1572876220 an=0.5 bl=0.5 lim=1 r=2 liv=0\
+ d0=169 d1=169 nr=1 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1572876281 an=0.5 bl=0.5 lim=1 r=2 liv=0\
+ d0=169 d1=169 nr=2 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1572876305 an=0.5 bl=0.5 lim=1 r=2 liv=0\
+ d0=169 d1=169 nr=2 pl=1 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1572876323 an=0.5 bl=0.5 lim=1 r=2 liv=0\
+ d0=169 d1=169 nr=2 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1572876456 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=2 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1572876548 an=0.5 bl=0.5 lim=1 r=2 liv=0\
+ d0=169 d1=169 nr=2 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1572876561 an=0.5 bl=0.5 lim=1 r=2 liv=1\
+ d0=338 d1=169 nr=2 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1572876647 an=0.5 bl=0.5 lim=1 r=2 liv=1\
+ d0=338 d1=169 nr=2 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1572876663 an=0.5 bl=0.5 lim=1 r=2 liv=1\
+ d0=338 d1=169 nr=2 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1572876755 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=5 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1572882897 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=5 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1572883023 an=0.5 bl=0.5 lim=1 r=2 liv=1\
+ d0=338 d1=169 nr=5 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1572883766 an=0.5 bl=0.5 lim=1 r=3 liv=1\
+ d0=338 d1=169 nr=5 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1572884291 an=0.5 bl=0.5 lim=1 r=1.5 liv=1\
+ d0=338 d1=169 nr=5 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+sim seed=1572885460 an=0.5 bl=0.5 lim=1 r=0.5 liv=1\
+ d0=338 d1=169 nr=5 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0

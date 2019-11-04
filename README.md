@@ -14,6 +14,7 @@ gcc -o sim sim_jam_fold.c -lm -O3
 Run the command using:
 sim an=0.5 bl=0.5 lim=1 r=[stack size] liv=0\
  d0=169 d1=169 nr=1 pl=0 pr=6
-
+ sim an=0.5 bl=0.5 lim=1 r=2.0 liv=0\
+  d0=169 d1=169 nr=1 pl=0 pr=6
 Interesting results: A.P.Selby's linear programming objective function maximize sum of m(k) in line 137(sim.c).
 That means a hand range allowed under specified stack size is essential compared to single hand under Nash's equilibrium theory.

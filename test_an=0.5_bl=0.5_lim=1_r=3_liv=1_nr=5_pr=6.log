@@ -1,0 +1,309 @@
+sim seed=1572883766 an=0.5 bl=0.5 lim=1 r=3 liv=1\
+ d0=338 d1=169 nr=5 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+Holdem limit: betsize=3 ante=0.5 blind=0.5 (LIVE)
+Finding initial pure strategy
+Setting up tableau
+   0) Obj=   0.0183992636  S:CR1C(TTo) ->R0C(rA3o)    A(i,j)=       3.172026 Degen=    4 Val=  5.12899909e-06
+   1) Obj=   0.0184043926  S:R1C(Q3o)  ->R1C(rA4o)    A(i,j)=    0.582695063 Degen=    4 Val=   0.00022511265
+   2) Obj=   0.0186295053  R0C(rA4o)   ->S:CR0C(Q3o)  A(i,j)=      1.7161635 Degen=    4 Val=  4.25046699e-05
+   3) Obj=     0.01867201  R1C(rA3o)   ->R1F(c32s)    A(i,j)=   0.0556293711 Degen=    4 Val=  2.91295759e-06
+   4) Obj=   0.0186749229  S:CR1C(KQs) ->R1C(cJ7o)    A(i,j)=     12.1314598 Degen=    4 Val=  1.37948791e-07
+   5) Obj=   0.0186750609  S:CR0C(Q2o) ->R1C(rK9o)    A(i,j)=     3.37511929 Degen=    4 Val=  9.38742456e-06
+   6) Obj=   0.0186844483  S:CR1C(77o) ->R0C(rA4o)    A(i,j)=     1.96831856 Degen=    4 Val=  6.39907416e-05
+   7) Obj=    0.018748439  R1C(c32s)   ->R0C(cT3s)    A(i,j)=    0.461844199 Degen=    4 Val=   3.7661834e-05
+   8) Obj=   0.0187861009  S:CR0C(Q3o) ->R0C(cJ2s)    A(i,j)=    0.447401719 Degen=    4 Val=  3.73803329e-05
+   9) Obj=   0.0188234812  S:R1C(J2s)  ->R1F(cK3o)    A(i,j)=     2.10988908 Degen=    4 Val=  4.99563648e-05
+  10) Obj=   0.0188734376  S:R1C(97o)  ->R0C(c86s)    A(i,j)=     0.74292425 Degen=    4 Val=  4.62966313e-05
+  11) Obj=   0.0189197342  R1F(c86s)   ->R1F(c97o)    A(i,j)=      3.0531679 Degen=    4 Val=  6.14055532e-05
+  12) Obj=   0.0189811398  S:CR2C(KKo) ->R1C(cK3o)    A(i,j)=      2.7510634 Degen=    4 Val=  1.44100986e-05
+  13) Obj=   0.0189955499  R0C(rK9o)   ->R1C(c76s)    A(i,j)=    0.116594112 Degen=    4 Val=  1.26359644e-05
+  14) Obj=   0.0190081858  S:R1C(J3s)  ->S:R1C(Q2o)   A(i,j)=    0.253674905 Degen=    4 Val=  4.12538221e-06
+  15) Obj=   0.0190123112  S:R2C(ATo)  ->S:CR0C(J3s)  A(i,j)=     8.77588708 Degen=    4 Val=  2.14102514e-05
+  16) Obj=   0.0190337215  R1C(cJ2s)   ->R1C(rQJo)    A(i,j)=     2.43493695 Degen=    4 Val=  1.16138099e-05
+  17) Obj=   0.0190453353  R1F(cK3o)   ->S:R1C(ATo)   A(i,j)=     0.18128886 Degen=    4 Val=  1.93880145e-05
+  18) Obj=   0.0190647233  R1F(c32s)   ->R1C(c32s)    A(i,j)=              1 Degen=    4 Val=  1.25419234e-05
+  19) Obj=   0.0190772652  R0C(rA4o)   ->R0C(cT2s)    A(i,j)=     1.68854039 Degen=    4 Val=  7.76805253e-06
+  20) Obj=   0.0190850333  R0C(cT3s)   ->R1F(c32s)    A(i,j)=    0.186081734 Degen=    4 Val=  1.06677488e-06
+  21) Obj=      0.0190861  R1F(c97o)   ->R2C(cTTo)    A(i,j)=     1.01656696 Degen=    4 Val=  1.53411458e-06
+  22) Obj=   0.0190876341  S:CR2C(AAo) ->R0C(cJ8o)    A(i,j)=    0.482339104 Degen=    4 Val=  2.94335586e-06
+  23) Obj=   0.0190905775  R1F(c76s)   ->R1F(c98o)    A(i,j)=     4.97496816 Degen=    4 Val=  2.63535964e-06
+  24) Obj=   0.0190932129  R1C(cT2s)   ->R0C(c87s)    A(i,j)=     3.98697123 Degen=    4 Val=  2.81352942e-05
+  25) Obj=   0.0191213481  S:R0F(T3s)  ->R1C(c44o)    A(i,j)=    0.503464281 Degen=    4 Val=  2.12463621e-05
+  26) Obj=   0.0191425945  S:R2C(99o)  ->R0C(c95o)    A(i,j)=     1.10856313 Degen=    4 Val=  3.30794905e-06
+  27) Obj=   0.0191459025  R0C(cJ8o)   ->R0C(rA4o)    A(i,j)=     4.11084909 Degen=    4 Val=  3.69018296e-06
+  28) Obj=   0.0191495926  R1C(cTTo)   ->R0C(c74s)    A(i,j)=    0.112025483 Degen=    4 Val=  3.94450843e-06
+  29) Obj=   0.0191535372  R0C(c87s)   ->R2C(cAQo)    A(i,j)=    0.977274476 Degen=    4 Val=  7.94229685e-06
+  30) Obj=   0.0191614794  R0C(cK3o)   ->R1C(rK7s)    A(i,j)=    0.258223324 Degen=    4 Val=  3.30252199e-06
+  31) Obj=    0.019164782  R1C(c32s)   ->R2C(cJTs)    A(i,j)=     1.56756181 Degen=    4 Val=  1.28481709e-06
+  32) Obj=   0.0191660668  S:CR0F(J6o) ->R0C(cJ4s)    A(i,j)=     1.53186828 Degen=    4 Val=  2.08568159e-06
+  33) Obj=   0.0191681525  R1C(c44o)   ->R1F(c97o)    A(i,j)=     7.22265818 Degen=    4 Val=   8.5615645e-07
+  34) Obj=   0.0191690086  R2C(cJTs)   ->S:R1C(J2s)   A(i,j)=      7.2718209 Degen=    4 Val=  3.90723352e-05
+  35) Obj=    0.019208081  R1C(c95o)   ->R1C(c96s)    A(i,j)=    0.498478274 Degen=    4 Val=   1.1630261e-05
+  36) Obj=   0.0192197112  R1C(c74s)   ->R1C(c43s)    A(i,j)=     1.33172064 Degen=    4 Val=  1.18597887e-05
+  37) Obj=    0.019231571  R0C(c96s)   ->R0C(c86o)    A(i,j)=     2.62761373 Degen=    4 Val=  3.17781602e-06
+  38) Obj=   0.0192347488  S:R1C(Q2o)  ->R1C(c95s)    A(i,j)=    0.408186159 Degen=    4 Val=  5.02329078e-06
+  39) Obj=   0.0192397721  S:CR1C(JJo) ->R1F(cT6s)    A(i,j)=    0.693486644 Degen=    4 Val=  7.02251138e-06
+  40) Obj=   0.0192467946  S:CR0C(J3s) ->R1C(c87o)    A(i,j)=    0.136372121 Degen=    4 Val=   9.0170858e-06
+  41) Obj=   0.0192558117  R1C(c86o)   ->R1C(c52s)    A(i,j)=     1.67231332 Degen=    4 Val=  1.57412528e-05
+  42) Obj=    0.019271553  S:CR1C(66o) ->R0C(r53s)    A(i,j)=    0.536905488 Degen=    4 Val=  1.82228697e-06
+  43) Obj=   0.0192733753  R0C(cJ4s)   ->R1C(c63s)    A(i,j)=    0.514346762 Degen=    4 Val=   3.6220261e-06
+  44) Obj=   0.0192769973  R1C(c52s)   ->R1C(c53s)    A(i,j)=    0.143210133 Degen=    4 Val=  7.33326177e-07
+  45) Obj=   0.0192777306  R1C(c43s)   ->R1F(cT6o)    A(i,j)=     8.09256578 Degen=    4 Val=  2.01231674e-06
+  46) Obj=   0.0192797429  R1F(cT6s)   ->S:CR0C(J3s)  A(i,j)=     5.50546205 Degen=    4 Val=  6.27968403e-07
+  47) Obj=   0.0192803709  R0C(c95s)   ->R1C(c43s)    A(i,j)=    0.302571937 Degen=    4 Val=  5.41420497e-06
+  48) Obj=   0.0192857851  R0C(c53s)   ->R1C(c87s)    A(i,j)=     21.9169582 Degen=    4 Val=  3.50389245e-06
+  49) Obj=    0.019289289  R1C(c63s)   ->R1F(c66o)    A(i,j)=    0.937170419 Degen=    4 Val=  8.86542911e-06
+  50) Obj=   0.0192981544  R1F(c98o)   ->R1F(cJTo)    A(i,j)=     12.8619053 Degen=    4 Val=  6.22057905e-06
+  51) Obj=    0.019304375  R0F(r53s)   ->S:CR0C(Q3o)  A(i,j)=    0.945831052 Degen=    4 Val=  4.32404025e-07
+  52) Obj=   0.0193048074  R1F(c66o)   ->R2F(cQJs)    A(i,j)=     0.80120893 Degen=    4 Val=  8.83263643e-06
+  53) Obj=     0.01931364  S:CR1C(88o) ->S:CR1C(66o)  A(i,j)=    0.484122054 Degen=    4 Val=  1.40456495e-06
+  54) Obj=   0.0193150446  S:R1C(J2s)  ->R1C(cQ3o)    A(i,j)=     1.37466285 Degen=    4 Val=  1.43194315e-06
+  55) Obj=   0.0193164765  S:CR1C(66o) ->R1F(cT2o)    A(i,j)=     1.82414579 Degen=    4 Val=  7.25861515e-06
+  56) Obj=   0.0193237352  R1F(cT6o)   ->R2F(cJJo)    A(i,j)=   0.0516718448 Degen=    4 Val=  2.57876742e-06
+  57) Obj=   0.0193263139  S:CR2C(TTo) ->S:CR2C(AAo)  A(i,j)=     17.3643469 Degen=    4 Val=  6.65295749e-07
+  58) Obj=   0.0193269792  R1C(rA4o)   ->R1C(cAKo)    A(i,j)=    0.244376233 Degen=    4 Val=  1.18023195e-06
+  59) Obj=   0.0193281595  R2F(cQJs)   ->S:CR0C(T3s)  A(i,j)=     13.5266114 Degen=    4 Val=  1.08235221e-05
+  60) Obj=    0.019338983  R1F(cJTo)   ->R2C(rTTo)    A(i,j)=     0.26407256 Degen=    4 Val=  4.73032704e-06
+  61) Obj=   0.0193437133  R0C(c97o)   ->R1C(cT7o)    A(i,j)=    0.573888377 Degen=    4 Val=  1.06146805e-05
+  62) Obj=    0.019354328  R1F(cT2o)   ->R0C(c94s)    A(i,j)=    0.615040907 Degen=    4 Val=  1.23359392e-05
+  63) Obj=   0.0193666639  S:CR0C(Q3o) ->R1F(c93s)    A(i,j)=    0.444373327 Degen=    4 Val=  3.70926397e-06
+  64) Obj=   0.0193703732  S:CR0C(T7o) ->R0C(cJTo)    A(i,j)=      0.9282246 Degen=    4 Val=  4.73780414e-06
+  65) Obj=    0.019375111  R1F(c87s)   ->R1C(cJ2s)    A(i,j)=    0.557734334 Degen=    4 Val=  2.10324213e-06
+  66) Obj=   0.0193772142  R1F(c94s)   ->R0C(rT6o)    A(i,j)=     9.93272121 Degen=    4 Val=  7.67773531e-07
+  67) Obj=    0.019377982  R0C(rK7s)   ->R1C(c93s)    A(i,j)=     1.56495756 Degen=    0 Val=   3.1879587e-06
+  68) Obj=     0.01938117  R1C(c43s)   ->R0C(cJ8o)    A(i,j)=     1.13897307 Degen=    0 Val=  3.82320595e-06
+  69) Obj=   0.0193849932  R0C(rT6o)   ->R0C(c55o)    A(i,j)=     0.14777132 Degen=    0 Val=  1.62325427e-06
+  70) Obj=   0.0193866164  R0C(rQJo)   ->R1C(cT2s)    A(i,j)=    0.468867598 Degen=    4 Val=  5.14829734e-06
+  71) Obj=   0.0193917647  R1F(c93s)   ->R1C(cTTo)    A(i,j)=     2.02363619 Degen=    4 Val=  2.11741533e-06
+  72) Obj=   0.0193938821  R0C(cQ3o)   ->R0C(cT3s)    A(i,j)=    0.301778138 Degen=    4 Val=  4.21282952e-06
+  73) Obj=    0.019398095  R0C(cJTo)   ->R1C(c97o)    A(i,j)=     2.77912179 Degen=    4 Val=  2.34379893e-07
+  74) Obj=   0.0193983294  R2C(rTTo)   ->R1F(c93s)    A(i,j)=    0.630082548 Degen=    4 Val=  3.13561223e-06
+  75) Obj=    0.019401465  R2C(cAKo)   ->R0C(cJ6s)    A(i,j)=    0.868148935 Degen=    4 Val=   2.9868543e-06
+  76) Obj=   0.0194044518  R1C(c93s)   ->R1C(c33o)    A(i,j)=     1.69857584 Degen=    4 Val=  1.01055439e-05
+  77) Obj=   0.0194145574  R0C(c33o)   ->R0C(c53s)    A(i,j)=     1.64531405 Degen=    4 Val=  1.18521438e-05
+  78) Obj=   0.0194264095  R1C(c53s)   ->S:CR0C(J2s)  A(i,j)=     14.2190731 Degen=    4 Val=  6.67124419e-06
+  79) Obj=   0.0194330807  R0C(cJ2s)   ->R0C(c84s)    A(i,j)=    0.377407886 Degen=    4 Val=  6.98781599e-06
+  80) Obj=   0.0194400686  R0C(cJ6s)   ->R1C(c86s)    A(i,j)=    0.933505416 Degen=    4 Val=  4.75247973e-06
+  81) Obj=    0.019444821  R1F(c84s)   ->R1C(cQ4o)    A(i,j)=     5.37348678 Degen=    4 Val=  3.66616088e-06
+  82) Obj=   0.0194484872  R1C(c86s)   ->R1C(c85s)    A(i,j)=    0.997639443 Degen=    4 Val=  2.84558675e-06
+  83) Obj=   0.0194513328  R0C(cT3s)   ->R0C(cJ6s)    A(i,j)=    0.083287922 Degen=    4 Val=  8.15106448e-06
+  84) Obj=   0.0194594839  R1C(c55o)   ->R1F(c32o)    A(i,j)=    0.793483017 Degen=    4 Val=  1.35760392e-06
+  85) Obj=   0.0194608415  R1C(cJ6s)   ->R0C(c32s)    A(i,j)=    0.851901014 Degen=    0 Val=  1.20806583e-06
+  86) Obj=   0.0194620495  R1F(c32s)   ->R1C(c93s)    A(i,j)=     1.48871103 Degen=    0 Val=  1.13519146e-05
+  87) Obj=   0.0194734014  R1F(c93s)   ->R1C(cT8o)    A(i,j)=     26.6879924 Degen=    0 Val=  2.99843735e-06
+  88) Obj=   0.0194763999  R1C(cJ7o)   ->R1C(cQ2o)    A(i,j)=    0.597417994 Degen=    0 Val=  1.26063207e-05
+  89) Obj=   0.0194890062  R0C(cQ2o)   ->R0C(c65s)    A(i,j)=    0.886762499 Degen=    0 Val=  2.40910882e-05
+  90) Obj=   0.0195130973  R0C(cT2s)   ->R0C(cK5o)    A(i,j)=      0.3206537 Degen=    0 Val=  5.13575628e-06
+  91) Obj=    0.019518233  R0C(cQ4o)   ->R1F(c87o)    A(i,j)=     5.49395814 Degen=    0 Val=  6.24116633e-07
+  92) Obj=   0.0195188572  R1C(c87o)   ->R0C(c96s)    A(i,j)=    0.394389397 Degen=    0 Val=  3.83537312e-06
+  93) Obj=   0.0195226925  R0C(cK5o)   ->R0C(c76s)    A(i,j)=    0.433715388 Degen=    0 Val=  5.04720137e-06
+  94) Obj=   0.0195277397  R1C(c93s)   ->R1F(c93o)    A(i,j)=     2.64903736 Degen=    0 Val=  1.21342357e-06
+  95) Obj=   0.0195289532  R1C(c65s)   ->R1F(c82o)    A(i,j)=      1.9841162 Degen=    0 Val=  2.10286539e-06
+  96) Obj=    0.019531056  R0C(c76s)   ->S:CR1C(99o)  A(i,j)=    0.635540281 Degen=    0 Val=  3.33878299e-06
+  97) Obj=   0.0195343948  R1C(cT7o)   ->R1F(cT3o)    A(i,j)=    0.769580514 Degen=    0 Val=  1.57688156e-06
+  98) Obj=   0.0195359717  R1C(c96s)   ->R0C(cT3s)    A(i,j)=    0.768997712 Degen=    0 Val=  1.22817028e-06
+  99) Obj=   0.0195371999  R2C(cTTo)   ->R1C(c53s)    A(i,j)=   0.0377130166 Degen=    0 Val=  1.47696608e-06
+ 100) Obj=   0.0195386768  R1C(cT3s)   ->R1C(c55o)    A(i,j)=      17.315276 Degen=    0 Val=  2.52649275e-06
+ 101) Obj=   0.0195412033  R1C(c85s)   ->R1F(cT2s)    A(i,j)=    0.430711702 Degen=    0 Val=  2.09277316e-07
+ 102) Obj=   0.0195414126  S:CR1C(99o) ->S:R2C(JJo)   A(i,j)=     11.8963698 Degen=    0 Val=  3.10112412e-07
+ 103) Obj=   0.0195417227  R1F(cT2s)   ->R0C(c95s)    A(i,j)=     1.33270059 Degen=    0 Val=  5.41647959e-07
+ 104) Obj=   0.0195422644  R1F(cT8o)   ->R1C(c87o)    A(i,j)=     1.25147249 Degen=    0 Val=  2.67485229e-06
+ 105) Obj=   0.0195449392  R1C(c95s)   ->R1C(cT4s)    A(i,j)=      1.3490058 Degen=    0 Val=  7.26250339e-07
+ 106) Obj=   0.0195456655  R1F(c32o)   ->R0C(rT6o)    A(i,j)=     11.9740188 Degen=    0 Val=  1.31297847e-06
+ 107) Obj=   0.0195469784  R1C(c87o)   ->S:CR0C(T7o)  A(i,j)=    0.260010553 Degen=    0 Val=  1.01570396e-05
+ 108) Obj=   0.0195571355  R1C(c53s)   ->R0C(r74s)    A(i,j)=    0.793080638 Degen=    0 Val=  1.04749045e-05
+ 109) Obj=   0.0195676104  S:R2C(JJo)  ->R1C(cJ5s)    A(i,j)=    0.429536448 Degen=    0 Val=  4.05214136e-06
+ 110) Obj=   0.0195716625  R0C(cJ5s)   ->R0F(r53s)    A(i,j)=      1.4590157 Degen=    0 Val=  8.99195937e-06
+ 111) Obj=   0.0195806545  R2C(cAQo)   ->R0C(c77o)    A(i,j)=    0.333720729 Degen=    0 Val=  2.21269535e-06
+ 112) Obj=   0.0195828672  S:R0F(T6o)  ->R1F(c98o)    A(i,j)=     1.52028451 Degen=    0 Val=  1.30136453e-06
+ 113) Obj=   0.0195841685  R1F(c87o)   ->R1C(cT7o)    A(i,j)=    0.233798034 Degen=    0 Val=  1.10015263e-05
+ 114) Obj=   0.0195951701  R0F(r53s)   ->R1C(cT3s)    A(i,j)=    0.552391363 Degen=    0 Val=  5.96043022e-06
+ 115) Obj=   0.0196011305  R0C(cT3s)   ->R1F(cJ2o)    A(i,j)=     10.6782521 Degen=    0 Val=  2.28541106e-06
+ 116) Obj=   0.0196034159  R0C(c77o)   ->R1C(c43s)    A(i,j)=    0.222119155 Degen=    0 Val=  1.08794772e-06
+ 117) Obj=   0.0196045039  S:R0F(87o)  ->R1C(cAQs)    A(i,j)=     1.24992399 Degen=    0 Val=  3.31742311e-07
+ 118) Obj=   0.0196048356  R1C(cT7o)   ->S:CR0C(Q3o)  A(i,j)=      1.1149861 Degen=    0 Val=  1.17346624e-06
+ 119) Obj=   0.0196060091  R1C(c43s)   ->R2C(rTTo)    A(i,j)=     4.18389743 Degen=    0 Val=  7.14514548e-07
+ 120) Obj=   0.0196067236  R1C(cAQs)   ->S:CR1C(66o)  A(i,j)=    0.651740451 Degen=    0 Val=  1.35327162e-07
+ 121) Obj=   0.0196068589  R0C(cT4s)   ->R1C(cJ3o)    A(i,j)=     5.40055168 Degen=    0 Val=  2.54889646e-07
+ 122) Obj=   0.0196071138  R1F(cJ2o)   ->R1C(cT6s)    A(i,j)=    0.264660369 Degen=    0 Val=  1.35156028e-06
+ 123) Obj=   0.0196084654  S:CR1C(66o) ->R1F(c83o)    A(i,j)=     3.95908789 Degen=    0 Val=  7.40348655e-07
+ 124) Obj=   0.0196092057  R1F(cT3o)   ->R0C(c76s)    A(i,j)=    0.350985512 Degen=    0 Val=  7.17159571e-07
+ 125) Obj=   0.0196099229  S:CR0C(Q3o) ->R0C(c66o)    A(i,j)=      2.6398266 Degen=    0 Val=  2.38644226e-06
+ 126) Obj=   0.0196123093  R0C(r74s)   ->R2F(cAQs)    A(i,j)=     2.30867886 Degen=    0 Val=    1.820567e-06
+ 127) Obj=   0.0196141299  S:R1C(T5s)  ->S:CR0C(97o)  A(i,j)=    0.127800749 Degen=    0 Val=  5.79130927e-07
+ 128) Obj=    0.019614709  R0C(cT6s)   ->R1C(c44o)    A(i,j)=    0.351742099 Degen=    0 Val=   1.6083366e-06
+ 129) Obj=   0.0196163173  R1C(c55o)   ->R1F(cT2o)    A(i,j)=     11.5698401 Degen=    0 Val=  2.64858083e-06
+ 130) Obj=   0.0196189659  R1F(c82o)   ->R1C(c32s)    A(i,j)=    0.807564026 Degen=    0 Val=  1.81573367e-06
+ 131) Obj=   0.0196207817  R1C(c76s)   ->R1C(c95s)    A(i,j)=    0.615417547 Degen=    0 Val=  7.85732758e-07
+ 132) Obj=   0.0196215674  R1F(c97o)   ->R0F(r53s)    A(i,j)=    0.504148996 Degen=    0 Val=   9.2674923e-07
+ 133) Obj=   0.0196224941  S:CR2C(66o) ->R1F(cT3o)    A(i,j)=    0.102479964 Degen=    0 Val=  4.12433152e-08
+ 134) Obj=   0.0196225354  R1F(c83o)   ->R0C(c97o)    A(i,j)=     1.22174514 Degen=    0 Val=  1.74429304e-07
+ 135) Obj=   0.0196227098  R0C(c95s)   ->R1F(cT7o)    A(i,j)=      10.012643 Degen=    0 Val=  3.01204701e-07
+ 136) Obj=    0.019623011  R1C(cJ3o)   ->R1C(c96s)    A(i,j)=    0.163460246 Degen=    0 Val=  3.58827379e-07
+ 137) Obj=   0.0196233698  R0F(r53s)   ->R0C(cJ5s)    A(i,j)=    0.838838363 Degen=    0 Val=  2.69617542e-07
+ 138) Obj=   0.0196236395  R1F(cT3o)   ->R1C(cT7o)    A(i,j)=     1.14073733 Degen=    0 Val=  4.12729216e-07
+ 139) Obj=   0.0196240522  R1C(c32s)   ->R1F(cJ3o)    A(i,j)=     2.43264124 Degen=    0 Val=  5.42130662e-07
+ 140) Obj=   0.0196245943  R0C(c96s)   ->R0C(cT6s)    A(i,j)=    0.871113503 Degen=    0 Val=  2.12904127e-07
+ 141) Obj=   0.0196248072  R1F(cT7o)   ->R1F(cJ4o)    A(i,j)=    0.366028825 Degen=    0 Val=  4.19201347e-07
+ 142) Obj=   0.0196252264  R1F(cJ3o)   ->S:CR1C(77o)  A(i,j)=    0.502071891 Degen=    0 Val=  1.39548865e-07
+ 143) Obj=    0.019625366  R1C(cT6s)   ->R1C(c76s)    A(i,j)=     2.55926215 Degen=    0 Val=  4.40497647e-07
+ 144) Obj=   0.0196258065  R1F(cJ4o)   ->R1F(cJ2o)    A(i,j)=     1.10708201 Degen=    0 Val=  5.96573551e-07
+ 145) Obj=    0.019626403  R0C(c44o)   ->S:CR0C(Q2o)  A(i,j)=    0.381350438 Degen=    0 Val=  2.47238669e-07
+ 146) Obj=   0.0196266503  S:R1C(ATo)  ->R3F(cAKo)    A(i,j)=     1.50856473 Degen=    0 Val=  3.13012763e-07
+ 147) Obj=   0.0196269633  R1F(cT2o)   ->R1C(c98o)    A(i,j)=     1.29687419 Degen=    0 Val=  2.53927041e-08
+ 148) Obj=   0.0196269887  R1C(c97o)   ->R1F(c97o)    A(i,j)=     1.29295206 Degen=    0 Val=  1.44241293e-06
+ 149) Obj=   0.0196284311  S:CR0C(Q2o) ->R0C(c96s)    A(i,j)=    0.115042812 Degen=    0 Val=  6.09507497e-07
+ 150) Obj=   0.0196290406  R1C(c96s)   ->S:CR2C(TTo)  A(i,j)=     31.5226921 Degen=    0 Val=   6.7505022e-07
+ 151) Obj=   0.0196297157  R3F(cAKo)   ->R1F(c92o)    A(i,j)=    0.606254766 Degen=    0 Val=  5.80110648e-07
+ 152) Obj=   0.0196302958  R1F(c97o)   ->R0C(c95s)    A(i,j)=    0.692366025 Degen=    0 Val=  1.01276947e-06
+ 153) Obj=   0.0196313085  R1F(cJ2o)   ->R1F(cJ3o)    A(i,j)=     1.00496098 Degen=    0 Val=  1.37325085e-08
+ 154) Obj=   0.0196313223  S:CR2C(KQs) ->R1C(c55o)    A(i,j)=    0.827660904 Degen=    0 Val=   3.3677012e-09
+ 155) Obj=   0.0196313256  R1C(c95s)   ->S:CR2C(66o)  A(i,j)=     1.49451387 Degen=    0 Val=  4.94696357e-07
+ 156) Obj=   0.0196318203  R1F(cJ3o)   ->R1F(cJ4o)    A(i,j)=    0.834675476 Degen=    0 Val=  5.79970543e-08
+ 157) Obj=   0.0196318783  R1C(c66o)   ->R0C(cT2s)    A(i,j)=    0.449497578 Degen=    0 Val=  3.62681932e-08
+
+DONE.  Time=13
+Final objective function=0.0196319146 (value to player 0)
+RMS primal prob. error=5.42170102e-15
+RMS dual prob. error=1.03003883e-15
+
+Actual primal value=0.0196319146
+Actual dual value=0.0196319146
+
+EP1=      1e-10   EP2=      5e-10   EP3=          0
+ep1= 5.2069e-14   ep2= 6.5854e-11   ep3=          0
+Ep1= 9.1455e-05   Ep2= 2.3396e-08   Ep3= 8.0109e-34
+d0=338 d1=169 nr=5 r=3 EP4=0
+
+Strategy for player 0 (big blind)
+Pure bit:
+    --- R0F ---
+r32o      r42o      r52o      r62o      r72o      r82o      r92o      rT2o      rJ2o      r32s      r43o      r53o      r63o      r73o      r83o      r93o      rT3o      rJ3o      r42s      r43s      r54o      r64o      r74o      r84o      r94o      rT4o      rJ4o      r52s      r65o      r75o      r85o      r95o      rT5o      r62s      r63s      r76o      r86o      r96o      r72s      r73s      r74s      r82s      r83s      r84s      r92s      r93s      r94s      
+
+    --- R0C ---
+r22o      c32o      c42o      c52o      c62o      c72o      c82o      cT2o      cJ2o      rQ2o      rK2o      rA2o      c32s      r33o      c43o      c53o      c63o      c73o      c83o      cT3o      cJ3o      rQ3o      rK3o      rA3o      c42s      c43s      c54o      c64o      c74o      c84o      c94o      cT4o      rQ4o      rK4o      rA4o      c52s      c53s      r53s      c54s      r54s      c65o      c75o      c85o      c95o      cT5o      cJ5o      rJ5o      rQ5o      rK5o      c62s      c63s      c64s      r64s      c65s      r65s      c66o      c76o      c86o      c96o      cT6o      cJ6o      rJ6o      rQ6o      rK6o      c72s      c73s      c74s      r75s      r76s      c87o      r87o      c97o      r97o      rT7o      cJ7o      rJ7o      rQ7o      rK7o      c82s      c83s      c84s      c85s      r85s      c86s      r86s      r87s      r98o      rT8o      rJ8o      rQ8o      rK8o      c92s      c93s      c94s      c95s      r95s      c96s      r96s      r97s      r98s      rT9o      rJ9o      rQ9o      rT2s      rT3s      rT4s      rT5s      cT6s      rT6s      rT7s      rT8s      rT9s      rJTo      rQTo      rJ2s      rJ3s      rJ4s      rJ5s      cJ6s      rJ6s      rJ7s      rJ8s      rJ9s      rJTs      rQ2s      rQ3s      rQ4s      rQ5s      rQ6s      rQ7s      rQ8s      rQ9s      rK2s      rK3s      rK4s      rK5s      rK6s      
+
+    --- R1F ---
+
+
+    --- R1C ---
+c22o      cQ2o      cK2o      cA2o      c33o      cQ3o      cK3o      cA3o      c44o      r44o      cQ4o      cK4o      cA4o      r55o      cQ5o      cK5o      cA5o      rA5o      r66o      cQ6o      cK6o      cA6o      rA6o      c75s      c77o      r77o      cQ7o      cK7o      cA7o      rA7o      c87s      c88o      r88o      cT8o      cQ8o      cK8o      cA8o      rA8o      c97s      c98s      c99o      r99o      cT9o      cJ9o      cQ9o      cK9o      rK9o      cA9o      rA9o      cT3s      cT4s      cT5s      cT7s      cT8s      cT9s      cTTo      cJTo      cQTo      cKTo      rKTo      cATo      rATo      cJ2s      cJ3s      cJ4s      cJ7s      cJ8s      cJ9s      cJTs      cQJo      rQJo      cKJo      rKJo      cAJo      rAJo      cQ2s      cQ3s      cQ4s      cQ5s      cQ6s      cQ7s      cQ8s      cQ9s      cQTs      rQTs      cQJs      rQJs      cKQo      rKQo      cAQo      rAQo      cK2s      cK3s      cK4s      cK5s      cK6s      cK7s      rK7s      cK8s      rK8s      cK9s      rK9s      cKTs      rKTs      cKJs      rKJs      cKQs      rKQs      cAKo      cA2s      rA2s      cA3s      rA3s      cA4s      rA4s      cA5s      rA5s      cA6s      rA6s      cA7s      rA7s      cA8s      rA8s      cA9s      rA9s      cATs      rATs      cAJs      rAJs      rAQs      
+
+    --- R2F ---
+
+
+    --- R2C ---
+rJJo      cQQo      rQQo      cKKo      rKKo      rAKo      cAKs      rAKs      
+
+    --- R3F ---
+
+
+    --- R3C ---
+cAAo      rAAo      
+
+    --- R4F ---
+
+
+    --- R4C ---
+
+
+    --- R5 ---
+
+
+Probabilistic bit:
+                R0F           R0C           R1F           R1C           R2F           R2C           R3F           R3C           R4F           R4C            R5
+ c92o             0       0.48881       0.51119             0             0             0             0             0             0             0             0  
+ c93o             0      0.631506      0.368494             0             0             0             0             0             0             0             0  
+ cJ4o             0      0.912972     0.0870284             0             0             0             0             0             0             0             0  
+ c55o             0      0.478006             0      0.521994             0             0             0             0             0             0             0  
+ rT6o      0.139963      0.860037             0             0             0             0             0             0             0             0             0  
+ c76s             0      0.637228             0      0.362772             0             0             0             0             0             0             0  
+ cT7o             0      0.180346             0      0.819654             0             0             0             0             0             0             0  
+ c98o             0      0.139344      0.057325      0.803331             0             0             0             0             0             0             0  
+ cJ8o             0      0.466221             0      0.533779             0             0             0             0             0             0             0  
+ cT2s             0      0.792216             0      0.207784             0             0             0             0             0             0             0  
+ rTTo             0             0             0      0.164955             0      0.835045             0             0             0             0             0  
+ cJ5s             0      0.875624             0      0.124376             0             0             0             0             0             0             0  
+ cJJo             0             0             0             0      0.262139      0.737861             0             0             0             0             0  
+ cAQs             0             0             0             0      0.528005      0.471995             0             0             0             0             0  
+
+Strategy for player 1 (small blind)
+Pure bit:
+    --- R0F ---
+32o       42o       52o       62o       72o       82o       92o       T2o       J2o       32s       43o       53o       63o       73o       83o       93o       T3o       J3o       42s       43s       54o       64o       74o       84o       94o       T4o       52s       53s       65o       75o       85o       95o       T5o       62s       63s       64s       76o       86o       96o       72s       73s       74s       82s       83s       84s       92s       93s       94s       T2s       T3s       
+
+    --- CR0F ---
+J4o       J5o       
+
+    --- CR0C ---
+T4s       
+
+    --- R1F ---
+
+
+    --- R1C ---
+22o       K2o       A2o       33o       K3o       A3o       44o       Q4o       K4o       A4o       54s       55o       Q5o       K5o       A5o       65s       Q6o       K6o       A6o       75s       76s       97o       T7o       J7o       Q7o       K7o       A7o       85s       86s       87s       98o       T8o       J8o       Q8o       K8o       A8o       95s       96s       97s       98s       T9o       J9o       Q9o       K9o       A9o       T6s       T7s       T8s       T9s       JTo       QTo       KTo       J2s       J3s       J4s       J5s       J6s       J7s       J8s       J9s       JTs       QJo       KJo       Q2s       Q3s       Q4s       Q5s       Q6s       Q7s       Q8s       Q9s       QTs       QJs       KQo       K2s       K3s       K4s       K5s       K6s       K7s       K8s       K9s       KTs       KJs       A2s       A3s       A4s       A5s       A6s       A7s       A8s       A9s       
+
+    --- CR1F ---
+
+
+    --- CR1C ---
+
+
+    --- R2F ---
+
+
+    --- R2C ---
+77o       AJo       QQo       AQo       AKo       ATs       AJs       AQs       AKs       
+
+    --- CR2F ---
+
+
+    --- CR2C ---
+
+
+    --- R3F ---
+
+
+    --- R3C ---
+KKo       AAo       
+
+    --- CR3F ---
+
+
+    --- CR3C ---
+
+
+    --- R4F ---
+
+
+    --- R4C ---
+
+
+    --- CR4F ---
+
+
+    --- CR4C ---
+
+
+    --- R5F ---
+
+
+    --- R5C ---
+
+
+Probabilistic bit:
+                R0F          CR0F          CR0C           R1F           R1C          CR1F          CR1C           R2F           R2C          CR2F          CR2C           R3F           R3C          CR3F          CR3C           R4F           R4C          CR4F          CR4C           R5F           R5C
+  Q2o             0             0       0.07692             0       0.92308             0             0             0             0             0             0             0             0             0             0             0             0             0             0             0             0  
+  Q3o             0             0      0.126046             0      0.873954             0             0             0             0             0             0             0             0             0             0             0             0             0             0             0             0  
+  66o             0             0             0             0      0.949322             0     0.0506776             0             0             0             0             0             0             0             0             0             0             0             0             0             0  
+  T6o      0.659654      0.340346             0             0             0             0             0             0             0             0             0             0             0             0             0             0             0             0             0             0             0  
+  J6o             0      0.534466      0.465534             0             0             0             0             0             0             0             0             0             0             0             0             0             0             0             0             0             0  
+  87o      0.336644             0             0             0      0.663356             0             0             0             0             0             0             0             0             0             0             0             0             0             0             0             0  
+  88o             0             0             0             0             0             0     0.0275748             0      0.972425             0             0             0             0             0             0             0             0             0             0             0             0  
+  99o             0             0             0             0             0             0      0.219412             0      0.780588             0             0             0             0             0             0             0             0             0             0             0             0  
+  T5s             0             0      0.112036             0      0.887964             0             0             0             0             0             0             0             0             0             0             0             0             0             0             0             0  
+  TTo             0             0             0             0             0             0     0.0596315             0      0.940368             0             0             0             0             0             0             0             0             0             0             0             0  
+  ATo             0             0             0             0       0.27093             0             0             0       0.72907             0             0             0             0             0             0             0             0             0             0             0             0  
+  JJo             0             0             0             0             0             0       0.98037             0     0.0196297             0             0             0             0             0             0             0             0             0             0             0             0  
+  KQs             0             0             0             0      0.360025             0      0.639975             0             0             0             0             0             0             0             0             0             0             0             0             0             0  

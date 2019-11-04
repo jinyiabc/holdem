@@ -1,0 +1,14 @@
+R1C for BB 
+set(['AQo', 'K4s', 'K4o', '99o', 'T8o', 'Q4s', 'A6s', 'A6o', 'J2s', 'Q4o', 'T8s', 'QJo', 'K5s', 'T7o', 'K5o', 'T7s', 'QJs', 'Q5s', 'A7s', 'J5o', 'A7o', 'J5s', 'Q5o', 'KQo', 'J9s', 'A4o', '44o', 'A4s', 'J9o', 'K7o', 'Q2o', 'K7s', 'Q2s', 'KQs', 'J8s', '98s', 'A5o', 'A5s', '98o', 'J8o', 'T9o', 'J3o', 'Q3o', '55o', 'JTs', 'Q3s', 'JTo', 'J3s', 'T9s', '22o', 'QTs', 'J7s', 'Q8o', 'Q8s', 'J7o', 'QTo', 'A2s', 'K9o', '96s', 'T4s', 'ATo', '86s', 'ATs', 'K9s', '96o', 'A2o', 'J6s', '33o', 'J6o', 'T3s', 'A3s', '97s', 'K6o', 'KJo', 'Q9s', 'KJs', 'Q9o', 'K6s', '97o', 'TTo', 'A3o', 'A8s', 'AJs', 'AQs', 'K2s', 'K2o', '77o', 'A8o', 'Q6o', 'AAo', 'T6s', 'T6o', 'Q6s', 'A9o', 'K3s', 'T5o', 'J4s', 'J4o', 'K3o', '88o', 'A9s', 'Q7o', '66o', 'K8o', '95s', 'T5s', '87s', 'KTs', '87o', 'KTo', 'AJo', 'K8s', 'Q7s'])
+(142, 113)
+R2C+ for BB 
+set(['AQs', 'AKs', 'QQo', 'AJs', 'AAo', 'JJo', 'KKo', 'TTo', 'ATs', 'AJo', 'AKo', '99o', '88o', 'AQo'])
+(19, 14)
+R1C for SB 
+['A2o', '33o', 'A3o', '44o', 'K4o', 'A4o', '55o', 'Q5o', 'K5o', 'A5o', '66o', 'T6o', 'J6o', 'Q6o', 'K6o', 'A6o', '97o', 'T7o', 'J7o', 'Q7o', 'K7o', 'A7o', '86s', '87s', '98o', 'T8o', 'J8o', 'Q8o', 'K8o', 'A8o', '95s', '96s', '97s', '98s', 'T9o', 'J9o', 'Q9o', 'K9o', 'A9o', 'T4s', 'T5s', 'T6s', 'T7s', 'T8s', 'T9s', 'JTo', 'QTo', 'KTo', 'J2s', 'J3s', 'J4s', 'J5s', 'J6s', 'J7s', 'J8s', 'J9s', 'JTs', 'QJo', 'Q2s', 'Q3s', 'Q4s', 'Q5s', 'Q6s', 'Q7s', 'Q8s', 'Q9s', 'QTs', 'QJs', 'K2s', 'K3s', 'K4s', 'K5s', 'K6s', 'K7s', 'K8s', 'K9s', 'A2s', 'A3s', 'A4s', 'A5s', 'A6s', 'A7s', 'A8s', 'A9s', 'KJo']
+CR1C_SB for SB 
+['KQo', 'AQo', 'KTs', 'KJs', 'KQs']
+R2C_SB for SB 
+['77o', '88o', '99o', 'TTo', 'JJo', 'AJo', 'QQo', 'AKo', 'ATs', 'AJs', 'AQs', 'AKs', 'ATo']
+R3C_SB for SB 
+['AAo', 'KKo']

@@ -1,0 +1,14 @@
+R1C for BB 
+set([])
+(0, 0)
+R2C+ for BB 
+set([])
+(0, 0)
+R1C for SB 
+['A2o', '33o', 'A3o', '44o', 'K4o', 'A4o', '55o', 'Q5o', 'K5o', 'A5o', '66o', 'T6o', 'J6o', 'Q6o', 'K6o', 'A6o', '97o', 'T7o', 'J7o', 'Q7o', 'K7o', 'A7o', '86s', '87s', '98o', 'T8o', 'J8o', 'Q8o', 'K8o', 'A8o', '95s', '96s', '97s', '98s', 'T9o', 'J9o', 'Q9o', 'K9o', 'A9o', 'T4s', 'T5s', 'T6s', 'T7s', 'T8s', 'T9s', 'JTo', 'QTo', 'KTo', 'J2s', 'J3s', 'J4s', 'J5s', 'J6s', 'J7s', 'J8s', 'J9s', 'JTs', 'QJo', 'Q2s', 'Q3s', 'Q4s', 'Q5s', 'Q6s', 'Q7s', 'Q8s', 'Q9s', 'QTs', 'QJs', 'K2s', 'K3s', 'K4s', 'K5s', 'K6s', 'K7s', 'K8s', 'K9s', 'A2s', 'A3s', 'A4s', 'A5s', 'A6s', 'A7s', 'A8s', 'A9s', 'KJo']
+CR1C_SB for SB 
+['KQo', 'AQo', 'KTs', 'KJs', 'KQs']
+R2C_SB for SB 
+['77o', '88o', '99o', 'TTo', 'JJo', 'AJo', 'QQo', 'AKo', 'ATs', 'AJs', 'AQs', 'AKs', 'ATo']
+R3C_SB for SB 
+['AAo', 'KKo']

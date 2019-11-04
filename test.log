@@ -1,0 +1,191 @@
+sim seed=1572882897 an=0.5 bl=0.5 lim=1 r=1 liv=1\
+ d0=338 d1=169 nr=5 pl=0 pr=6 EP1=1e-10 EP2=5e-10 EP3=0 EP4=0
+Holdem limit: betsize=1 ante=0.5 blind=0.5 (LIVE)
+Finding initial pure strategy
+Setting up tableau
+   0) Obj=   0.0220488502  S:CR1C(AQo) ->R1C(cQ2o)    A(i,j)=       2.096372 Degen=    4 Val=  5.92879526e-06
+   1) Obj=    0.022054779  S:R2C(AJo)  ->R0C(c87o)    A(i,j)=    0.300957446 Degen=    4 Val=  1.78497147e-05
+   2) Obj=   0.0220726287  R0C(rQ9s)   ->R1C(rQ9s)    A(i,j)=              1 Degen=    4 Val=  4.23235295e-05
+   3) Obj=   0.0221149522  S:R1C(J2s)  ->S:R2C(AQo)   A(i,j)=    0.807279506 Degen=    4 Val=  2.39891743e-05
+   4) Obj=   0.0221389414  S:CR2F(AKo) ->R2C(cAJo)    A(i,j)=        1.82807 Degen=    4 Val=  6.56384701e-06
+   5) Obj=   0.0221455052  S:CR0C(86s) ->R1C(rQTo)    A(i,j)=     0.17252989 Degen=    9 Val=  5.32527096e-06
+   6) Obj=   0.0221508305  R0C(cQ2o)   ->S:R1C(86s)   A(i,j)=     4.86183419 Degen=    9 Val=   1.8510546e-05
+   7) Obj=   0.0221693411  S:CR2F(KKo) ->R1C(rK9o)    A(i,j)=     1.22729845 Degen=    9 Val=   1.0604747e-05
+   8) Obj=   0.0221799458  R1C(rQTo)   ->R1C(c66o)    A(i,j)=    0.734140753 Degen=   14 Val=  2.20712751e-05
+   9) Obj=   0.0222020171  S:CR1C(KJo) ->R0C(rQ9s)    A(i,j)=   0.0392534629 Degen=   14 Val=  3.11803168e-05
+  10) Obj=   0.0222331974  R1C(rQ9s)   ->R0C(rA5o)    A(i,j)=     42.0113449 Degen=   14 Val=  3.44086953e-06
+  11) Obj=   0.0222366383  R0C(rK9o)   ->R0C(rK7s)    A(i,j)=    0.378816818 Degen=   14 Val=  2.48238181e-05
+  12) Obj=   0.0222614621  R0C(rA5o)   ->S:CR1C(AJo)  A(i,j)=    0.825776408 Degen=   14 Val=  2.01027564e-06
+  13) Obj=   0.0222634724  R2C(c66o)   ->R1C(rAKo)    A(i,j)=    0.510527043 Degen=   14 Val=  4.89540764e-06
+  14) Obj=   0.0222683678  R1C(rK7s)   ->S:CR0C(J2s)  A(i,j)=      9.8726705 Degen=   14 Val=  3.72362928e-06
+  15) Obj=   0.0222720914  S:R2C(ATo)  ->R1C(c77o)    A(i,j)=     1.79912604 Degen=    9 Val=   2.6035257e-06
+  16) Obj=   0.0222746949  S:R1C(J5o)  ->R0C(r44o)    A(i,j)=    0.125985641 Degen=    9 Val=  1.96904343e-05
+  17) Obj=   0.0222943854  R1C(r44o)   ->S:CR0C(J5o)  A(i,j)=     7.93741246 Degen=    9 Val=   5.7517721e-06
+  18) Obj=   0.0223001371  S:CR1C(KTs) ->R1C(cATo)    A(i,j)=    0.231556676 Degen=    9 Val=  2.24840758e-06
+  19) Obj=   0.0223023855  R2C(c77o)   ->R2C(cATs)    A(i,j)=   0.0515304657 Degen=    9 Val=  3.66576634e-06
+  20) Obj=   0.0223060513  R1C(cATs)   ->S:CR1C(KJo)  A(i,j)=     20.2897287 Degen=    4 Val=  2.00286122e-06
+  21) Obj=   0.0223080542  R1C(rAKo)   ->R2C(c77o)    A(i,j)=     1.61332323 Degen=    4 Val=  8.51281932e-07
+  22) Obj=   0.0223089055  S:R1C(86s)  ->S:R1C(KTs)   A(i,j)=    0.142045448 Degen=    4 Val=  1.76425685e-06
+  23) Obj=   0.0223106697  S:CR1C(KJo) ->S:CR2F(AKo)  A(i,j)=    0.205974581 Degen=    4 Val=   3.2984705e-06
+  24) Obj=   0.0223139682  S:CR0C(J5o) ->R1C(rQ9s)    A(i,j)=    0.457854589 Degen=    4 Val=  2.73648428e-07
+  25) Obj=   0.0223142418  R2C(cATo)   ->S:CR0C(86s)  A(i,j)=     3.68265836 Degen=    4 Val=  4.44856505e-07
+  26) Obj=   0.0223146867  R1C(rQ9s)   ->R1C(rAKo)    A(i,j)=     2.47123185 Degen=    4 Val=  7.33285749e-07
+  27) Obj=     0.02231542  S:CR2F(AKo) ->R0C(rA5o)    A(i,j)=     21.9313741 Degen=    4 Val=  1.11242943e-06
+  28) Obj=   0.0223165324  S:CR2C(AKo) ->R3F(cAQo)    A(i,j)=     15.0536279 Degen=    9 Val=[     134896.491]
+  29) Obj=   0.0223165324  R3F(cAQo)   ->R3F(cQQo)    A(i,j)=    0.352292881 Degen=    9 Val=[     24149.8052]
+  30) Obj=   0.0223165324  S:CR3F(AKo) ->R3F(cAAo)    A(i,j)=     7.26311317 Degen=    9 Val=[     15750.2677]
+  31) Obj=   0.0223165324  R3F(cQQo)   ->R4F(cQQo)    A(i,j)=    0.951147717 Degen=    9 Val=[     35689.0324]
+  32) Obj=   0.0223165324  S:CR4F(AKo) ->R4F(cAAo)    A(i,j)=     9.98250615 Degen=    9 Val=[     18761.0356]
+  33) Obj=   0.0223165324  R4F(cQQo)   ->R5(cQQo)     A(i,j)=    0.944634079 Degen=    9 Val=[     40447.5701]
+  34) Obj=   0.0223165324  S:CR2C(KKo) ->R5(cAAo)     A(i,j)=     1.16748806 Degen=    9 Val=[     21409.1207]
+  35) Obj=   0.0223165324  S:CR4C(KKo) ->S:CR2F(KKo)  A(i,j)=    0.723556851 Degen=    4 Val=  6.41025862e-23
+  36) Obj=   0.0223165324  R5(cQQo)    ->R4F(cKQo)    A(i,j)=     1.61496937 Degen=    8 Val=[      308045.46]
+  37) Obj=   0.0223165324  R4F(cKQo)   ->R4F(cQQo)    A(i,j)=    0.249828264 Degen=    8 Val=[     81874.9564]
+  38) Obj=   0.0223165324  R4F(cQQo)   ->R4F(cKKo)    A(i,j)=   0.0877287246 Degen=    8 Val=[     61602.6453]
+  39) Obj=   0.0223165324  S:CR3C(AKo) ->S:CR2F(AKo)  A(i,j)=     10.3141009 Degen=    8 Val=[     241315.091]
+  40) Obj=   0.0223165324  S:CR4C(AKo) ->S:CR3F(AKo)  A(i,j)=     0.73292453 Degen=    8 Val=  1.47897913e-38
+  41) Obj=   0.0223165324  S:CR2F(AKo) ->S:CR4F(AKo)  A(i,j)=    0.154573519 Degen=    4 Val=  1.34903868e-38
+  42) Obj=   0.0223165324  R4F(cKKo)   ->R3F(cKKo)    A(i,j)=    0.180491875 Degen=    4 Val=  1.28403762e-37
+  43) Obj=   0.0223165324  S:CR4C(AKs) ->S:CR2C(AKo)  A(i,j)=     15.8707882 Degen=    4 Val=  7.87564699e-07
+  44) Obj=     0.02231732  S:CR3C(KKo) ->R3C(cAAo)    A(i,j)=   0.0791100092 Degen=    4 Val=  4.94608194e-07
+  45) Obj=   0.0223178146  R2C(cAAo)   ->R2F(cAKo)    A(i,j)=     7.65331813 Degen=    4 Val=  2.20400654e-06
+  46) Obj=   0.0223200186  R2C(c77o)   ->S:R2C(AKs)   A(i,j)=     10.7910674 Degen=    4 Val=  2.11536057e-06
+  47) Obj=   0.0223221339  R1C(cAJo)   ->S:CR2F(AKo)  A(i,j)=    0.071210055 Degen=    4 Val=  2.72076251e-08
+  48) Obj=   0.0223221611  R2F(cAKo)   ->R3F(cAKo)    A(i,j)=    0.197624454 Degen=    4 Val=  1.01725671e-07
+  49) Obj=   0.0223222629  R3F(cKKo)   ->R1C(c88o)    A(i,j)=     5.42287421 Degen=    4 Val=  1.59291853e-07
+  50) Obj=   0.0223224222  S:CR3C(AKs) ->S:CR4C(AKo)  A(i,j)=     0.17558772 Degen=    4 Val=  1.22489686e-20
+  51) Obj=   0.0223224222  R1C(c88o)   ->S:CR3C(AKo)  A(i,j)=   0.0426036089 Degen=    4 Val=  9.77760973e-07
+  52) Obj=   0.0223233999  S:CR2C(AKs) ->R3C(cKKo)    A(i,j)=        0.06707 Degen=    4 Val=  1.87735258e-08
+  53) Obj=   0.0223234187  S:R2C(AKs)  ->R3F(cAKs)    A(i,j)=    0.539165071 Degen=    4 Val=  3.62811414e-08
+  54) Obj=    0.022323455  R3F(cAKo)   ->R2C(c77o)    A(i,j)=     6.57927498 Degen=    4 Val=  1.72426228e-08
+  55) Obj=   0.0223234722  S:CR2F(AKo) ->R3F(cKKo)    A(i,j)=      3.1033266 Degen=    4 Val=  1.35892966e-08
+  56) Obj=   0.0223234858  R3F(cAKs)   ->S:CR2C(AKs)  A(i,j)=     14.4412494 Degen=    4 Val=  1.55559962e-09
+
+DONE.  Time=7
+Final objective function=0.0223234874 (value to player 0)
+RMS primal prob. error=8.64627034e-17
+RMS dual prob. error=4.31342357e-16
+
+Actual primal value=0.0223234874
+Actual dual value=0.0223234874
+
+EP1=      1e-10   EP2=      5e-10   EP3=          0
+ep1= 5.6843e-13   ep2=  4.566e-10   ep3=          0
+Ep1=  5.731e-05   Ep2= 5.5424e-10   Ep3=  5.428e-35
+d0=338 d1=169 nr=5 r=1 EP4=0
+
+Strategy for player 0 (big blind)
+Pure bit:
+    --- R0F ---
+
+
+    --- R0C ---
+r22o      c32o      r32o      c42o      r42o      c52o      r52o      c62o      r62o      c72o      r72o      c82o      r82o      c92o      r92o      cT2o      rT2o      cJ2o      rJ2o      rQ2o      rK2o      rA2o      c32s      r32s      r33o      c43o      r43o      c53o      r53o      c63o      r63o      c73o      r73o      c83o      r83o      c93o      r93o      cT3o      rT3o      rJ3o      rQ3o      rK3o      rA3o      c42s      r42s      c43s      r43s      r44o      c54o      r54o      c64o      r64o      c74o      r74o      c84o      r84o      c94o      r94o      cT4o      rT4o      rJ4o      rQ4o      rK4o      rA4o      c52s      r52s      c53s      r53s      c54s      r54s      c65o      r65o      c75o      r75o      c85o      r85o      c95o      r95o      rT5o      rJ5o      rQ5o      rK5o      c62s      r62s      c63s      r63s      c64s      r64s      c65s      r65s      c76o      r76o      c86o      r86o      r96o      rT6o      rJ6o      rQ6o      rK6o      c72s      r72s      c73s      r73s      c74s      r74s      c75s      r75s      c76s      r76s      r87o      r97o      rT7o      rJ7o      rQ7o      rK7o      c82s      r82s      c83s      r83s      c84s      r84s      c85s      r85s      r86s      r87s      r98o      rT8o      rJ8o      rQ8o      rK8o      c92s      r92s      c93s      r93s      c94s      r94s      r95s      r96s      r97s      r98s      rT9o      rJ9o      rQ9o      cT2s      rT2s      rT3s      rT4s      rT5s      rT6s      rT7s      rT8s      rT9s      rJTo      rQTo      rJ2s      rJ3s      rJ4s      rJ5s      rJ6s      rJ7s      rJ8s      rJ9s      rJTs      rQ2s      rQ3s      rQ4s      rQ5s      rQ6s      rQ7s      rQ8s      rQ9s      rK2s      rK3s      rK4s      rK5s      rK6s      rK7s      
+
+    --- R1F ---
+
+
+    --- R1C ---
+c22o      cQ2o      cK2o      cA2o      c33o      cJ3o      cQ3o      cK3o      cA3o      c44o      cJ4o      cQ4o      cK4o      cA4o      c55o      r55o      cT5o      cJ5o      cQ5o      cK5o      cA5o      c66o      r66o      c96o      cT6o      cJ6o      cQ6o      cK6o      cA6o      rA6o      r77o      c97o      cT7o      cJ7o      cQ7o      cK7o      cA7o      rA7o      c86s      c87s      r88o      c98o      cT8o      cJ8o      cQ8o      cK8o      cA8o      rA8o      c95s      c96s      c97s      c98s      r99o      cT9o      cJ9o      cQ9o      cK9o      rK9o      cA9o      rA9o      cT3s      cT4s      cT5s      cT6s      cT7s      cT8s      cT9s      rTTo      cJTo      cQTo      cKTo      rKTo      cATo      rATo      cJ2s      cJ3s      cJ4s      cJ5s      cJ6s      cJ7s      cJ8s      cJ9s      cJTs      cQJo      rQJo      cKJo      rKJo      rAJo      cQ2s      cQ3s      cQ4s      cQ5s      cQ6s      cQ7s      cQ8s      cQ9s      cQTs      rQTs      cQJs      rQJs      cKQo      rKQo      rAQo      cK2s      cK3s      cK4s      cK5s      cK6s      cK7s      cK8s      rK8s      cK9s      rK9s      cKTs      rKTs      cKJs      rKJs      cKQs      rKQs      cA2s      rA2s      cA3s      rA3s      cA4s      rA4s      cA5s      rA5s      cA6s      rA6s      cA7s      rA7s      cA8s      rA8s      cA9s      rA9s      rATs      rAJs      rAQs      
+
+    --- R2F ---
+
+
+    --- R2C ---
+c88o      c99o      cTTo      cJJo      rJJo      cAJo      cQQo      rQQo      cAQo      rKKo      cAKo      cATs      cAJs      cAQs      cAKs      rAKs      
+
+    --- R3F ---
+
+
+    --- R3C ---
+rAAo      
+
+    --- R4F ---
+
+
+    --- R4C ---
+
+
+    --- R5 ---
+
+
+Probabilistic bit:
+                R0F           R0C           R1F           R1C           R2F           R2C           R3F           R3C           R4F           R4C            R5
+ rA5o             0     0.0542539             0      0.945746             0             0             0             0             0             0             0  
+ c77o             0             0             0      0.997519             0    0.00248081             0             0             0             0             0  
+ c87o             0      0.259736             0      0.740264             0             0             0             0             0             0             0  
+ cKKo             0             0             0             0             0      0.981213     0.0103939    0.00839339             0             0             0  
+ rAKo             0             0             0      0.141858             0      0.858142             0             0             0             0             0  
+ cAAo             0             0             0             0             0             0     0.0600172      0.939983   3.29322e-15             0   3.14198e-14  
+
+Strategy for player 1 (small blind)
+Pure bit:
+    --- R0F ---
+32o       42o       52o       62o       72o       82o       43o       63o       73o       83o       
+
+    --- CR0F ---
+
+
+    --- CR0C ---
+22o       92o       T2o       J2o       Q2o       K2o       32s       53o       93o       T3o       J3o       Q3o       K3o       42s       43s       54o       64o       74o       84o       94o       T4o       J4o       Q4o       52s       53s       54s       65o       75o       85o       95o       T5o       62s       63s       64s       65s       76o       86o       96o       72s       73s       74s       75s       76s       87o       82s       83s       84s       85s       92s       93s       94s       T2s       T3s       
+
+    --- R1F ---
+
+
+    --- R1C ---
+A2o       33o       A3o       44o       K4o       A4o       55o       Q5o       K5o       A5o       66o       T6o       J6o       Q6o       K6o       A6o       97o       T7o       J7o       Q7o       K7o       A7o       86s       87s       98o       T8o       J8o       Q8o       K8o       A8o       95s       96s       97s       98s       T9o       J9o       Q9o       K9o       A9o       T4s       T5s       T6s       T7s       T8s       T9s       JTo       QTo       KTo       J2s       J3s       J4s       J5s       J6s       J7s       J8s       J9s       JTs       QJo       Q2s       Q3s       Q4s       Q5s       Q6s       Q7s       Q8s       Q9s       QTs       QJs       K2s       K3s       K4s       K5s       K6s       K7s       K8s       K9s       A2s       A3s       A4s       A5s       A6s       A7s       A8s       A9s       
+
+    --- CR1F ---
+
+
+    --- CR1C ---
+KQo       AQo       KTs       KJs       KQs       
+
+    --- R2F ---
+
+
+    --- R2C ---
+77o       88o       99o       TTo       JJo       AJo       QQo       AKo       ATs       AJs       AQs       AKs       
+
+    --- CR2F ---
+
+
+    --- CR2C ---
+
+
+    --- R3F ---
+
+
+    --- R3C ---
+AAo       
+
+    --- CR3F ---
+
+
+    --- CR3C ---
+
+
+    --- R4F ---
+
+
+    --- R4C ---
+
+
+    --- CR4F ---
+
+
+    --- CR4C ---
+
+
+    --- R5F ---
+
+
+    --- R5C ---
+
+
+Probabilistic bit:
+                R0F          CR0F          CR0C           R1F           R1C          CR1F          CR1C           R2F           R2C          CR2F          CR2C           R3F           R3C          CR3F          CR3C           R4F           R4C          CR4F          CR4C           R5F           R5C
+  J5o             0             0      0.643426             0      0.356574             0             0             0             0             0             0             0             0             0             0             0             0             0             0             0             0  
+  ATo             0             0             0             0             0             0       0.26982             0       0.73018             0             0             0             0             0             0             0             0             0             0             0             0  
+  KJo             0             0             0             0      0.626688             0      0.373312             0             0             0             0             0             0             0             0             0             0             0             0             0             0  
+  KKo             0             0             0             0             0             0             0             0             0             0      0.399418             0      0.600582             0             0             0             0             0   4.06691e-15             0             0  

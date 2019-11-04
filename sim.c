@@ -284,7 +284,7 @@ it++;
 //procp(m,n,c0,c1,d0,d1,a,mi,ni);
 }
 
-printf("\nDONE.  Time=%ds\n",time(NULL)-t0);
+printf("\nDONE.  Time=%ld\n",time(NULL)-t0);
 for(i=0;i<=m+n;i++)xx[i]=0;
 for(i=1;i<=m;i++)xx[mi[i]]=a[i][0];
 for(i=0;i<d0;i++)for(j=0;j<c0;j++)p[i][j]=xx[fnep(i,j)];
